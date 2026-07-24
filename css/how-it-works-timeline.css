@@ -1,0 +1,407 @@
+/* ========================================
+   HOE HET WERKT TIMELINE SECTION
+   ======================================== */
+
+.how-it-works-timeline {
+    position: relative;
+    padding: 96px 0;
+    background: #0F1115;
+    overflow: hidden;
+}
+
+/* Decorative Background Elements */
+.timeline-bg-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.timeline-bg-circle-1 {
+    position: absolute;
+    top: 25%;
+    right: -80px;
+    width: 384px;
+    height: 384px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+}
+
+.timeline-bg-circle-2 {
+    position: absolute;
+    bottom: 25%;
+    left: -80px;
+    width: 384px;
+    height: 384px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+}
+
+/* Section Header */
+.timeline-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+.timeline-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background: rgba(30, 41, 59, 0.5);
+    color: #64B5F6;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(100, 181, 246, 0.3);
+    margin-bottom: 24px;
+}
+
+.timeline-header h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #F8FAFC;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.timeline-header p {
+    color: #94A3B8;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    z-index: 10;
+}
+
+/* Vertical Timeline Line (Desktop Only) */
+.timeline-line {
+    display: none;
+}
+
+/* Timeline Items */
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Timeline Number Badge */
+.timeline-number-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.timeline-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+}
+
+.timeline-number-pulse {
+    position: absolute;
+    inset: 0;
+    background: #e91e63;
+    border-radius: 50%;
+    animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    opacity: 0.2;
+}
+
+@keyframes pulse-ring {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* Timeline Content */
+.timeline-content {
+    flex: 1;
+    text-align: center;
+}
+
+.timeline-icon {
+    display: inline-flex;
+    align-items: center;
+    /* Center icon and text vertically */
+    gap: 12px;
+    /* Space between icon and text */
+    padding: 12px 24px;
+    /* Wider padding for pill shape */
+    border-radius: 50px;
+    /* Full pill shape */
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.timeline-icon-title {
+    font-size: 1.25rem;
+    /* Large enough to be a title */
+    font-weight: 700;
+    color: inherit;
+    /* Inherit bright color from parent */
+    letter-spacing: 0.5px;
+}
+
+.timeline-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.timeline-icon.icon-orange {
+    background: rgba(233, 30, 99, 0.15);
+    color: #f48fb1;
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.timeline-icon.icon-green {
+    background: rgba(156, 39, 176, 0.15);
+    color: #ce93d8;
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.timeline-icon.icon-teal {
+    background: rgba(233, 30, 99, 0.15);
+    color: #f48fb1;
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.timeline-icon.icon-yellow {
+    background: rgba(156, 39, 176, 0.15);
+    color: #ce93d8;
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.timeline-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #F8FAFC;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.timeline-content p {
+    color: #94A3B8;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 448px;
+    margin: 0 auto;
+}
+
+/* Timeline Image */
+.timeline-image-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.timeline-image {
+    position: relative;
+    height: 256px;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    transform: rotate(1deg);
+}
+
+.timeline-item:nth-child(even) .timeline-image {
+    transform: rotate(-1deg);
+}
+
+.timeline-image:hover {
+    transform: rotate(0deg) !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.timeline-image:hover .timeline-image-overlay {
+    background: rgba(0, 0, 0, 0);
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.timeline-image:hover img {
+    transform: scale(1.1);
+}
+
+/* Placeholder gradient for images */
+.timeline-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+}
+
+/* ========================================
+   DESKTOP STYLES (768px and up)
+   ======================================== */
+
+@media (min-width: 768px) {
+    .how-it-works-timeline {
+        padding: 120px 0;
+    }
+
+    .timeline-header {
+        margin-bottom: 100px;
+    }
+
+    /* Show vertical timeline line */
+    .timeline-line {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 250px;
+        /* Start BELOW the header text */
+        bottom: 50px;
+        /* Don't run off the bottom edge */
+        width: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        /* Straight, subtle solid line */
+        transform: translateX(-50%);
+        z-index: 0;
+    }
+
+    .timeline-items {
+        gap: 96px;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 64px;
+    }
+
+    .timeline-content {
+        flex: 1;
+        width: 55%;
+        /* Ensure text takes more space */
+    }
+
+    .timeline-image-wrapper {
+        width: 40%;
+        /* Make image smaller */
+        flex: 0 0 40%;
+    }
+
+    /* Alternate layout: even items reverse */
+    .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    /* Content alignment */
+    .timeline-content {
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        text-align: right;
+    }
+
+    /* Icon alignment */
+    .timeline-item:nth-child(even) .timeline-icon {
+        margin-left: 0;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-icon {
+        margin-right: 0;
+    }
+
+    /* Content paragraph alignment */
+    .timeline-item:nth-child(even) .timeline-content p {
+        margin-left: 0;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content p {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .timeline-content h3 {
+        font-size: 30px;
+    }
+
+    .timeline-content p {
+        font-size: 18px;
+    }
+
+    .timeline-image {
+        height: 320px;
+    }
+}
+
+/* ========================================
+   LARGE DESKTOP (1024px and up)
+   ======================================== */
+
+@media (min-width: 1024px) {
+    .timeline-content h3 {
+        font-size: 36px;
+    }
+
+    .timeline-image {
+        height: 384px;
+    }
+}

@@ -1,0 +1,17 @@
+name: Deploy to Mac Mini
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'infra-agent/**' # Only deploy if agent code changes
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Mac Mini Update
+        run: |
+          curl -X POST ${{ secrets.MAC_MINI_URL }}/deploy \
+            -H "Authorization: Bearer ${{ secrets.DEPLOY_TOKEN }}"

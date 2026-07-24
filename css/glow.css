@@ -1,0 +1,21 @@
+.glow-source {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    /* Full width for overlay effect */
+    height: 600px;
+    /* Massive height to blend deeply into both sections */
+    background:
+        radial-gradient(ellipse at center, rgba(168, 85, 247, 0.4) 0%, rgba(168, 85, 247, 0.1) 40%, transparent 70%),
+        linear-gradient(to bottom, transparent 20%, rgba(168, 85, 247, 0.15) 50%, transparent 80%);
+    filter: blur(80px);
+    /* Extreme softness */
+    z-index: -1;
+    /* Behind logos */
+    pointer-events: none;
+    opacity: 0.8;
+    mix-blend-mode: screen;
+    /* Smooth light blending */
+}

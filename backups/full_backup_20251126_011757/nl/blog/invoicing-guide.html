@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Een Stap-voor-Stap Gids voor het Automatiseren van Facturering voor Je Klein Bedrijf in Nederland - AutoFlow Studio</title>
+    <meta name="description" content="Automatiseer uw facturatieproces en ontvang sneller betaling. Volledige gids voor factuurautomatisering, betalingstracking en cashflow-optimalisatie.">
+    <meta property="og:title" content="Een Stap-voor-Stap Gids voor het Automatiseren van Facturering voor Je Klein Bedrijf in Nederland - AutoFlow Studio">
+    <meta property="og:description" content="Automatiseer uw facturatieproces en ontvang sneller betaling. Volledige gids voor factuurautomatisering, betalingstracking en cashflow-optimalisatie.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.autoflowstudio.net/nl/blog/invoicing-guide">
+    <meta property="og:site_name" content="AutoFlow Studio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Een Stap-voor-Stap Gids voor het Automatiseren van Facturering voor Je Klein Bedrijf in Nederland - AutoFlow Studio">
+    <meta name="twitter:description" content="Automatiseer uw facturatieproces en ontvang sneller betaling. Volledige gids voor factuurautomatisering, betalingstracking en cashflow-optimalisatie.">
+    <link rel="canonical" href="https://www.autoflowstudio.net/nl/blog/invoicing-guide">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../../js/supabase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../../css/cookies-banner.css">
+    <script src="../../js/gsap.js"></script>
+    <link rel="icon" href="/favicon.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Automate Your Invoicing: A Complete Guide to Getting Paid Faster",
+  "description": "Automatiseer uw facturatieproces en ontvang sneller betaling. Volledige gids voor factuurautomatisering, betalingstracking en cashflow-optimalisatie.",
+  "image": "https://www.autoflowstudio.net/images/blog-invoicing.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "AutoFlow Studio",
+    "url": "https://www.autoflowstudio.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AutoFlow Studio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.autoflowstudio.net/favicon.png"
+    }
+  },
+  "datePublished": "2025-01-23",
+  "dateModified": "2025-01-23",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.autoflowstudio.net/nl/blog/invoicing-guide"
+  },
+  "inLanguage": "nl"
+}
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-logo" id="loadingLogo">AutoFlow Studio</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">AutoFlow Studio</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../../blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="../../portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="../../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="language-switch">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn active" data-lang="nl">NL</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <div class="hero-background">
+            <div class="abstract-element sphere-1"></div>
+            <div class="abstract-element sphere-2"></div>
+            <div class="geometric-shapes">
+                <div class="dots-pattern"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>AutoFlow Studio Blog</h1>
+            <p>Inzichten, tips en strategieën om je bedrijf te automatiseren en productiviteit te verhogen</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="blog-container">
+        <article class="blog-article">
+            <header class="article-header">
+                <div class="category-badge">Factuur Automatisering</div>
+                <h1 class="article-title">Een Stap-voor-Stap Gids voor het Automatiseren van Facturering voor Je Klein Bedrijf in Nederland</h1>
+                <p class="article-subtitle">Transformeer je facturering van een maandelijkse marathon naar een geautomatiseerd systeem dat cashflow verbetert, fouten elimineert en Nederlandse compliance waarborgt.</p>
+                <div class="article-meta">
+                    <div class="author">
+                        <div class="author-avatar">AF</div>
+                        <span>AutoFlow Studio</span>
+                    </div>
+                    <span>•</span>
+                    <span>28 januari 2025</span>
+                    <span>•</span>
+                    <span>18 min lezen</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="hero-image">
+                <img src="https://i.postimg.cc/QtxZM7x1/photo-2025-10-17-17-06-00.jpg" 
+                alt="Nederlands MKB Bedrijfsautomatisering Dashboard" />
+                </div>
+
+                <p>Voor veel kleine bedrijfseigenaren in Nederland triggert het einde van de maand een vertrouwd, tijdrovend ritueel: de factureringsmarathon. Het is een meerfasige race tegen de klok waarbij facturen worden gemaakt, projectdetails worden achterhaald, handmatig BTW wordt berekend, PDF's worden gemaild en dan, het meest frustrerende deel—late betalingen achterhalen. Aan de andere kant is er de berg leveranciersfacturen die zich opstapelt en handmatige data-invoer, goedkeuringen en verwerking vraagt.</p>
+
+                <p>Deze handmatige sleur is meer dan alleen een gedoe. Het is een directe drain op je meest waardevolle resource: tijd. Het creëert cashflow gaten, introduceert het risico van kostbare fouten in je financiële rapportage en houdt jou en je team begraven in administratief werk in plaats van te focussen op het laten groeien van het bedrijf.</p>
+
+                <div class="highlight-box">
+                    <h3>Stel Je Een Andere Realiteit Voor</h3>
+                    <p>Een systeem waarin je facturen automatisch worden gegenereerd en verstuurd op het moment dat een project is voltooid. Waar betalingsherinneringen worden verstuurd zonder dat je een vinger hoeft uit te steken. Waar leveranciersfacturen worden gelezen, begrepen en ingevoerd in je boekhoudsysteem met nul handmatig typen.</p>
+                    <p>Dit is geen toekomstfantasie; dit is wat een goed geïmplementeerd factuurautomatiseringssysteem kan leveren. Deze gids biedt een praktisch, stap-voor-stap stappenplan om je te helpen een robuust factureringssysteem te plannen en implementeren dat past bij je Nederlandse MKB, fouten vermindert, cashflow verbetert en compliance waarborgt.</p>
+                </div>
+
+                <h2>Stap 0: Het Fundament Leggen voor Succes</h2>
+
+                <p>Voordat je springt naar het kiezen van software, zal een beetje voorbereiding ervoor zorgen dat je automatiseringsproject een succes wordt. Deze fundamentele stap gaat over begrijpen wat je nu doet en definiëren wat je wilt bereiken.</p>
+
+                <h3>1. Begrijp de Twee Kanten van Facturering</h3>
+                <p>Het is cruciaal om te erkennen dat "factuurautomatisering" twee verschillende, maar gerelateerde processen omvat:</p>
+
+                <div class="results-box">
+                    <h3>De Twee Processen</h3>
+                    <p><strong>Debiteuren (AR):</strong> Dit is het proces van je klanten factureren en betaald krijgen. Het doel hier is snelheid en verbeterde cashflow.</p>
+                    <p><strong>Crediteuren (AP):</strong> Dit is het proces van facturen ontvangen, goedkeuren en betalen van je leveranciers. Het doel hier is efficiëntie en nauwkeurigheid.</p>
+                    <p>Je kunt ervoor kiezen om één of beide te automatiseren, maar het onderscheid begrijpen is essentieel. De stappen in deze gids kunnen worden toegepast op beide processen.</p>
+                </div>
+
+                <h3>2. Breng Je Huidige Factureringsworkflow in Kaart</h3>
+                <p>Je kunt een proces niet automatiseren dat je niet volledig begrijpt. Zoals we hebben besproken in eerdere gidsen over procesefficiëntie, is de eerste stap altijd je huidige workflow in kaart te brengen. Pak een whiteboard of een stuk papier en trace de hele reis van een factuur door je bedrijf.</p>
+
+                <div class="highlight-box">
+                    <h3>Vragen om Jezelf te Stellen</h3>
+                    <p><strong>Voor AR:</strong> Wat triggert dat een factuur wordt aangemaakt? Wie verzamelt de informatie? Wie maakt het? Wie keurt het goed voordat het wordt verstuurd? Hoe houd je bij of het betaald is? Wat gebeurt er als het te laat is?</p>
+                    <p><strong>Voor AP:</strong> Hoe komen facturen binnen (email, post)? Wie opent ze? Wie controleert ze tegen een inkooporder of levering? Wie moet ze goedkeuren? Wie voert handmatig de data in je boekhoudsoftware in? Hoe wordt het gearchiveerd?</p>
+                </div>
+
+                <p>Deze kaart zal je huidige knelpunten, redundanties en de exacte stappen onthullen die rijp zijn voor automatisering.</p>
+
+                <h3>3. Definieer Je Doelen</h3>
+                <p>Wat is je primaire motivatie voor automatiseren? Wees specifiek. Je doelen zullen bepalen welke tools en strategieën je prioriteit geeft.</p>
+
+                <div class="results-box">
+                    <h3>Voorbeeld Doelen</h3>
+                    <ul>
+                        <li>"Verminder de tijd die we besteden aan AP data-invoer met 80%."</li>
+                        <li>"Verlaag onze gemiddelde factuurbetalingstijd van 45 dagen naar 25 dagen."</li>
+                        <li>"Elimineer data-invoerfouten om 100% accurate BTW-rapportage aan de Belastingdienst te waarborgen."</li>
+                    </ul>
+                </div>
+
+                <p>Met dit fundament op zijn plaats ben je klaar om te beginnen met het bouwen van je geautomatiseerde systeem.</p>
+
+                <h2>De 5 Stappen naar Geautomatiseerde Facturering</h2>
+
+                <h2>Stap 1: Kies Je Kerntechnologie - De Boekhouding Hub</h2>
+
+                <p>Het hart van elk modern financieel systeem is een robuust, cloud-based boekhoudplatform. Als je nog steeds spreadsheets of verouderde desktopsoftware gebruikt, is dit je eerste en belangrijkste upgrade. Dit platform zal dienen als de centrale hub waar al je andere automatiseringen op aansluiten.</p>
+
+                <p>Voor bedrijven in Nederland, zoek naar platformen die specifiek ontworpen zijn voor de lokale markt.</p>
+
+                <div class="results-box">
+                    <h3>Populaire Nederlandse Keuzes</h3>
+                    <p>Exact Online, AFAS Software, Moneybird en Jortt zijn allemaal uitstekende opties die breed worden gebruikt door Nederlandse MKB's.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Belangrijkste Functies om Naar te Zoeken</h3>
+                    <ul>
+                        <li><strong>Geautomatiseerde Bankafstemming:</strong> Directe links naar Nederlandse banken (zoals ABN AMRO, ING, Rabobank) om betalingen automatisch te matchen met facturen.</li>
+                        <li><strong>Ingebouwde BTW Rapportage:</strong> Het vermogen om nauwkeurige BTW-rapporten te genereren die voldoen aan Belastingdienst eisen.</li>
+                        <li><strong>API Toegang:</strong> Dit is cruciaal. Een API (Application Programming Interface) stelt andere software in staat om te verbinden en data te delen met je boekhoudplatform, wat de sleutel is tot echte automatisering.</li>
+                    </ul>
+                </div>
+
+                <h2>Stap 2: Automatiseren van Debiteuren (Sneller Betaald Krijgen)</h2>
+
+                <p>Zodra je boekhouding hub op zijn plaats is, kun je het proces van je klanten factureren automatiseren.</p>
+
+                <h3>Standaardiseer Je Facturen</h3>
+                <p>Gebruik je software om een professionele, gestandaardiseerde factuursjabloon te maken. Zorg ervoor dat het alle verplichte informatie bevat voor Nederlandse facturen: je KVK en BTW-ID nummers, het BTW-ID van de klant (indien van toepassing), een uniek volgnummer voor facturen en een duidelijke specificatie van goederen/diensten.</p>
+
+                <h3>Automatiseer Factuurgeneratie</h3>
+                <p>Het doel is stoppen met handmatig facturen maken. Verbind je boekhoudplatform met het systeem waar je werk ontstaat:</p>
+
+                <div class="results-box">
+                    <h3>Integratie Voorbeelden</h3>
+                    <ul>
+                        <li><strong>Projectmanagement Tool (bijv. Teamwork, Asana):</strong> Wanneer een project wordt gemarkeerd als "voltooid," triggert het de creatie van een conceptfactuur.</li>
+                        <li><strong>E-commerce Platform (bijv. Shopify, WooCommerce):</strong> Wanneer een klant een product koopt, wordt de factuur automatisch gegenereerd en verstuurd.</li>
+                        <li><strong>CRM (bijv. HubSpot):</strong> Wanneer een deal wordt gemarkeerd als "Closed Won," worden de klant- en dealdata gebruikt om de factuur te maken.</li>
+                    </ul>
+                </div>
+
+                <h3>Automatiseer Verzenden & Herinneringen</h3>
+                <p>Dit is een simpele maar ongelooflijk krachtige functie. Configureer je software om automatisch de factuur te e-mailen zodra deze is aangemaakt. Nog belangrijker, stel een geautomatiseerde herinneringsreeks in.</p>
+
+                <div class="highlight-box">
+                    <h3>Effectieve Herinneringsreeks</h3>
+                    <ul>
+                        <li>Een beleefde herinnering 3 dagen voor de vervaldatum.</li>
+                        <li>Een "betaling is nu verschuldigd" melding op de vervaldatum.</li>
+                        <li>Een ferme maar professionele "factuur is te laat" herinnering 7 dagen na de vervaldatum.</li>
+                    </ul>
+                </div>
+
+                <h3>Bied Direct Digitale Betalingen Aan</h3>
+                <p>Maak het zo gemakkelijk mogelijk voor je klanten om je te betalen. Integreer je boekhoudplatform met een Nederlands-vriendelijke payment gateway zoals Mollie of Adyen. Dit voegt een "Betaal Nu" knop toe aan je digitale facturen, waardoor klanten direct kunnen betalen met iDEAL, creditcard of andere methoden. Facturen met een betaalknop worden aantoonbaar significant sneller betaald.</p>
+
+                <h2>Stap 3: Automatiseren van Crediteuren (Leveranciersfacturen Verwerken)</h2>
+
+                <p>Dit is waar je de geestdodende taak van handmatige data-invoer elimineert. De sleuteltechnologie hier is Intelligent Document Processing (IDP).</p>
+
+                <h3>Selecteer een IDP Tool</h3>
+                <p>Kies een tool die facturen die je ontvangt kan lezen, begrijpen en data kan extraheren. Sommige tools zijn standalone applicaties specifiek ontworpen hiervoor (zoals het Nederlandse bedrijf Klippa), terwijl veel boekhoudplatformen (zoals Exact Online) uitstekende ingebouwde of add-on IDP mogelijkheden hebben.</p>
+
+                <h3>Creëer een Digitale Postbus</h3>
+                <p>Stel een enkel, toegewijd e-mailadres in voor alle leveranciersfacturen (bijv. facturen@jouwbedrijf.nl). Communiceer dit duidelijk aan al je leveranciers. Dit e-mailadres wordt het geautomatiseerde toegangspunt voor je IDP systeem.</p>
+
+                <h3>Configureer Extractie & Goedkeuringsregels</h3>
+                <p>Leer je IDP systeem welke data te zoeken. Stel vervolgens geautomatiseerde goedkeuringsworkflows in die je bedrijfslogica weerspiegelen:</p>
+
+                <div class="highlight-box">
+                    <h3>Voorbeeld Regels</h3>
+                    <p><strong>Regel 1:</strong> "Als een factuur van KPN is voor onze maandelijkse telefoonrekening en het bedrag is minder dan €200, keur het automatisch goed."</p>
+                    <p><strong>Regel 2:</strong> "Als een factuur voor 'Grondstoffen' is en boven €1.000, stuur een melding naar de Operations Manager voor goedkeuring met één klik."</p>
+                </div>
+
+                <h3>Zorg voor Naadloze Integratie</h3>
+                <p>Je IDP tool moet perfect integreren met je boekhouding hub. Het doel is "straight-through processing." Zodra een factuur is goedgekeurd, moeten alle geëxtraheerde data—leverancier, bedrag, BTW, regelitems—verschijnen als een conceptrekening in je boekhoudsoftware, correct gecodeerd en klaar voor betaling, met de originele PDF bijgevoegd ter referentie. Geen handmatig typen.</p>
+
+                <h2>Stap 4: Omarm E-Facturering (UBL & Peppol)</h2>
+
+                <p>Dit is de gouden standaard van factuurautomatisering. Een e-factuur is geen PDF bijgevoegd aan een e-mail. Het is een veilig, gestructureerd databestand (het meest voorkomende formaat in Nederland is UBL) dat wordt verzonden over een veilig netwerk genaamd Peppol.</p>
+
+                <div class="highlight-box">
+                    <h3>Waarom Het Belangrijk Is</h3>
+                    <p>Omdat de factuur pure data is, elimineert het de noodzaak voor scannen of AI-gebaseerde extractie. Het is een perfecte, foutloze transmissie van informatie van het systeem van je leverancier direct in dat van jou. De Nederlandse overheid is een grote voorstander hiervan en het is verplicht voor alle Business-to-Government (B2G) transacties.</p>
+                </div>
+
+                <h3>Hoe te Implementeren</h3>
+                <p>De meeste moderne Nederlandse boekhoudplatformen kunnen zowel UBL facturen versturen als ontvangen. Begin door je grootste of meest frequente leveranciers te vragen of ze je facturen in UBL formaat kunnen sturen. Hoe meer leveranciers je op e-facturering hebt, hoe efficiënter je AP proces wordt.</p>
+
+                <h2>Stap 5: Testen, Trainen en Monitoren</h2>
+
+                <p>Een automatiseringssysteem is geen "zet het en vergeet het" machine.</p>
+
+                <h3>Draai een Pilotprogramma</h3>
+                <p>Ga niet live met alle leveranciers tegelijk. Begin met een handvol vriendelijke leveranciers om je nieuwe AP workflow te testen. Stuur facturen naar een paar vertrouwde klanten om je nieuwe AR workflow te testen. Los eventuele problemen op kleine schaal op.</p>
+
+                <h3>Train Je Team</h3>
+                <p>De rol van je team zal verschuiven van data-invoermedewerkers naar uitzonderingsmanagers. Train ze over hoe het nieuwe systeem te gebruiken, hoe facturen af te handelen die de AI markeert voor review en hoe de algemene gezondheid van het systeem te monitoren.</p>
+
+                <h3>Monitor Belangrijke Metrics</h3>
+                <p>Volg je voortgang tegen de doelen die je in Stap 0 hebt gesteld. Meet metrics zoals "Gemiddelde tijd om een factuur betaald te krijgen," "Percentage leveranciersfacturen verwerkt zonder menselijke tussenkomst" en "Tijd besteed aan maandelijkse financiële afsluiting." Gebruik deze data om je workflows te blijven optimaliseren.</p>
+
+                <h2>De Echte ROI: Meer Dan Alleen Tijd Besparen</h2>
+
+                <p>Het automatiseren van je factureringsproces levert voordelen die rimpelen door je hele bedrijf:</p>
+
+                <div class="results-box">
+                    <h3>Bedrijfsbrede Voordelen</h3>
+                    <ul>
+                        <li><strong>Dramatisch Verbeterde Cashflow:</strong> Sneller betaald krijgen is de levensader van elk MKB.</li>
+                        <li><strong>Verhoogde Nauwkeurigheid & Compliance:</strong> Foutloze data betekent dat je je BTW-aangiftes met vertrouwen kunt indienen en je altijd een schoon, digitaal audittraject hebt voor de Belastingdienst.</li>
+                        <li><strong>Sterkere Zakelijke Relaties:</strong> Je leveranciers nauwkeurig en op tijd betalen bouwt vertrouwen op en maakt je een voorkeursklant.</li>
+                        <li><strong>Real-Time Financiële Zichtbaarheid:</strong> Met data die dagelijks in je boekhoudsysteem stroomt, heb je altijd een up-to-date beeld van je financiële gezondheid, wat betere zakelijke beslissingen mogelijk maakt.</li>
+                        <li><strong>Echte Schaalbaarheid:</strong> Een geautomatiseerd systeem kan 500 facturen afhandelen met dezelfde minimale inspanning die het kost om 50 te verwerken, wat een financieel fundament biedt dat de groei van je bedrijf kan ondersteunen.</li>
+                    </ul>
+                </div>
+
+                <h2>Conclusie: Je Eerste Stap naar Financiële Vrijheid</h2>
+
+                <p>Het automatiseren van je facturering is een van de meest impactvolle efficiëntieprojecten die een klein bedrijf kan ondernemen. Het transformeert een traag, foutgevoelig en frustrerend handmatig proces in een snel, nauwkeurig en gestroomlijnd systeem dat een robuust financieel fundament bouwt voor je bedrijf.</p>
+
+                <p>Het pad is duidelijk: breng je proces in kaart, kies je kerntools, automatiseer systematisch hoe je betaald krijgt en hoe je je rekeningen betaalt, en omarm moderne Nederlandse standaarden zoals UBL.</p>
+
+                <div class="highlight-box">
+                    <h3>Klaar om te Beginnen?</h3>
+                    <p>Deze gids biedt de kaart, maar we begrijpen dat de eerste stap zetten nog steeds ontmoedigend kan zijn. Als je een expert co-piloot wilt om je te helpen de juiste tools te kiezen en de perfecte geautomatiseerde workflow voor je Nederlandse bedrijf te ontwerpen, neem contact met ons op voor een gratis, vrijblijvende consultatie.</p>
+                </div>
+
+                <div class="tag-list">
+                    <span class="tag">Factuur Automatisering</span>
+                    <span class="tag">Nederlandse Boekhouding</span>
+                    <span class="tag">BTW Compliance</span>
+                    <span class="tag">Debiteuren</span>
+                    <span class="tag">Crediteuren</span>
+                    <span class="tag">UBL Facturering</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Call to Action -->
+        <section class="blog-cta-section">
+            <div class="container">
+                <h2>Klaar om Je Facturering te Automatiseren?</h2>
+                <p>Transformeer je maandelijkse factureringsmarathon in een geautomatiseerd systeem dat cashflow verbetert en handmatig werk elimineert. Laten we de perfecte oplossing voor je Nederlandse bedrijf ontwerpen.</p>
+                <a href="https://autoflow.neetocal.com/meeting-with-auto-flow" target="_blank" class="cta-button">Boek Je Factureringsautomatisering Consultatie</a>
+            </div>
+        </section>
+
+        <!-- Related Articles -->
+        <section class="related-articles">
+            <div class="container">
+                <h2 class="section-title">Gerelateerde Artikelen</h2>
+                <p class="section-subtitle">Ontdek meer manieren om je bedrijf te automatiseren en productiviteit te verhogen</p>
+                
+                <div class="related-articles-grid">
+                    <!-- Article 1 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://i.postimg.cc/mZFhGqJ2/Chat-GPT-Image-Aug-15-2025-06-43-48-PM.png" alt="10 Repetitieve Taken">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-tag">Productiviteit</span>
+                                <span class="blog-tag">Tijdbeheer</span>
+                            </div>
+                            <h3>10 Repetitieve Taken die Je Bedrijf Tijd en Geld Kosten (En Hoe Ze te Automatiseren)</h3>
+                            <p>Ontdek de stille productiviteitskillers in je dagelijkse routine en leer hoe automatisering ze voor altijd kan elimineren.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">12 januari 2025</span>
+                                <a href="Blog 2.html" class="read-more">Lees Meer →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                             <img src="https://i.postimg.cc/BbWS6SkZ/Chat-GPT-Image-Aug-15-2025-06-54-26-PM.png" alt="Wat is BPA?">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-tag">Bedrijfsstrategie</span>
+                                <span class="blog-tag">BPA</span>
+                            </div>
+                            <h3>Wat is Business Process Automation (BPA)? Een Begrijpelijke Gids voor Niet-Technische Oprichters</h3>
+                            <p>Transformeer je groeiende bedrijf van chaotisch bordjes-draaien naar een gestroomlijnde, schaalbare operatie met deze oprichter-vriendelijke introductie tot BPA.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">10 januari 2025</span>
+                                <a href="Blog 3.html" class="read-more">Lees Meer →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://i.postimg.cc/JzdW07Bw/Chat-GPT-Image-Aug-17-2025-10-39-44-PM.png" alt="Automatiseringsstrateeg">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-tag">Strategisch Denken</span>
+                                <span class="blog-tag">Automatiseringsstrategie</span>
+                            </div>
+                            <h3>Je Hebt Geen "Zapier Expert" Nodig, Je Hebt een Automatiseringsstrateeg Nodig</h3>
+                            <p>Waarom focussen op tools in plaats van strategie leidt tot dure, fragiele automatisering die bezwijkt onder druk—en hoe je als een architect denkt in plaats van een loodgieter.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">8 januari 2025</span>
+                                <a href="Blog 6.html" class="read-more">Lees Meer →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Company Branding -->
+            <div class="footer-branding">
+                <h3>AutoFlow Studio</h3>
+                <p class="footer-description">
+                    Automatiseringsoplossingen bouwen die tijd besparen en handmatig werk elimineren. Verbind met ons en blijf op de hoogte van de laatste automatiserings-inzichten.
+                </p>
+            </div>
+            
+            <!-- Social Media Section -->
+            <div class="footer-social-section">
+                <h4>Volg Ons</h4>
+                <div class="footer-social-links">
+                    <a href="https://www.instagram.com/auto.flow25" class="footer-social-link" title="Instagram" target="_blank">
+                        <img src="https://i.ibb.co/67KTsBBp/instagram-1384015.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="footer-social-link" title="TikTok" target="_blank">
+                        <img src="https://i.ibb.co/LzmHMXNb/tiktok-3116491.png" alt="TikTok">
+                    </a>
+                    <a href="#" class="footer-social-link" title="YouTube" target="_blank">
+                        <img src="https://i.ibb.co/9jbRt6k/youtube-1384012.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.linkedin.com/company/auto-flow-studio/" class="footer-social-link" title="LinkedIn" target="_blank">
+                        <img src="https://i.ibb.co/RknLHqpx/linkedin-1384014.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="footer-navigation">
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../blog.html">Blog</a></li>
+                    <li><a href="../../portfolio.html">Portfolio</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>© 2025 AutoFlow Studio. Alle rechten voorbehouden. | autoflowcompany2025@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tools FAB -->
+    <div id="tools-fab-container" class="tools-fab-container">
+        <div id="tools-menu" class="tools-menu">
+            <div class="tool-item" id="open-calculator-btn">
+                <div class="tool-label">Prijs Calculator</div>
+                <div class="tool-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="12" y1="10" x2="12" y2="18"></line><line x1="8" y1="14" x2="16" y2="14"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="tool-item" id="open-chatbot-btn">
+                <div class="tool-label">AI Assistent</div>
+                <div class="tool-icon tool-icon-text">
+                    Ai
+                </div>
+            </div>
+        </div>
+        <div id="main-fab" class="fab-icon">
+            <svg id="tools-icon" class="main-fab-icon" width="28" height="28" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+               <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path>
+               <line x1="12" y1="19" x2="12" y2="19.01"></line>
+            </svg>
+            
+            <svg id="close-icon" class="main-fab-icon" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+               <path d="M18 6l-12 12"></path>
+               <path d="M6 6l12 12"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Calculator Modal -->
+    <div id="calculator-modal-overlay" class="calculator-modal-overlay">
+        <div id="calculator-modal" class="calculator-modal">
+            
+            <!-- Close Button -->
+            <button id="close-calculator-modal-btn" class="close-modal-btn">&times;</button>
+            
+            <h2 style="font-size: 2rem; font-weight: 800; color: #1a1a1a; margin: 0 0 15px 0; text-align: center; padding: 0 15px;">Automatisering Prijs Estimator</h2>
+            
+            <p style="color: #6b7280; font-size: 0.85rem; text-align: center; margin: 0 auto 25px auto; line-height: 1.4; max-width: 450px; padding: 0 15px;">Selecteer je opties om een real-time prijsschatting te krijgen voor je maatwerk automatiseringsproject.</p>
+
+            <form id="pricing-calculator-form" class="pricing-calculator-form">
+                <!-- Two column layout for main options -->
+                <div class="mobile-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Teamgrootte</label>
+                        <div class="custom-select">
+                            <select id="team-size" name="team-size">
+                                <option value="solo">Klein (1-5 personen)</option>
+                                <option value="growing">Middelgroot (6-25 personen)</option>
+                                <option value="established">Groot (26-99 personen)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">
+                            Aantal Taken
+                            <span class="tasks-tooltip tooltip-icon">?
+                                <div class="tooltip-content">
+                                    <strong>Wat telt als één taak?</strong><br><br>
+                                    • <strong>Eén automatiseringsworkflow</strong> die een specifiek bedrijfsprobleem oplost<br><br>
+                                    • Voorbeelden: "Verstuur email bij formulier inzending", "Update spreadsheet bij verkoop", "Maak agenda-afspraak van email"<br><br>
+                                    • Elke aparte automatisering = 1 taak
+                                </div>
+                            </span>
+                        </label>
+                        <input type="number" id="num-tasks" name="num-tasks" value="1" min="1" max="10" style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 0.9rem; background: #f8fafc; color: #374151;">
+                    </div>
+                </div>
+                
+                <!-- Add-ons section -->
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a1a1a; margin: 0 0 15px 0;">Extra's</h3>
+                
+                <div class="mobile-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">
+                            Taak Complexiteit
+                            <span class="complexity-tooltip tooltip-icon">?
+                                <div class="tooltip-content">
+                                    <strong>Simpele Syncs (€100 per taak):</strong> Basis data overdracht tussen twee apps (bijv. Gmail naar Google Sheets).<br><br>
+                                    <strong>Slimme Workflows (€250 per taak):</strong> Omvat AI, dataverwerking of conditionele logica.<br><br>
+                                    <strong>Geavanceerde Oplossingen (€400 per taak):</strong> Omvat web scraping, maatwerk API integraties of complexe data manipulatie.
+                                </div>
+                            </span>
+                        </label>
+                        <div class="custom-select">
+                            <select id="task-complexity" name="task-complexity">
+                                <option value="simple">Simpele Syncs</option>
+                                <option value="smart">Slimme Workflows</option>
+                                <option value="advanced">Geavanceerde Oplossingen</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Management Controls</label>
+                        <div class="custom-select">
+                            <select id="management-option" name="management-option">
+                                <option value="background">Geen (draait automatisch)</option>
+                                <option value="sheets-controls">Google Sheets dashboard</option>
+                                <option value="custom-dashboard">Maatwerk dashboard</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Support Checkbox -->
+                <div style="margin-bottom: 25px;">
+                    <label style="display: flex; align-items: center; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; cursor: pointer;">
+                        <input type="checkbox" id="support-plan" name="support-plan" style="width: 18px; height: 18px; margin-right: 10px; accent-color: #e91e63;">
+                        Maandelijkse ondersteuning
+                    </label>
+                </div>
+            </form>
+
+            <!-- Results Section -->
+            <div class="mobile-results" style="background: linear-gradient(135deg, #fce4ec, #f3e5f5); padding: 15px; border-radius: 15px; text-align: center;">
+                <div style="color: #9ca3af; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">GESCHAT TOTAAL</div>
+                
+                <div id="one-time-price" class="mobile-price" style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #e91e63, #9c27b0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; line-height: 1;">€100</div>
+                
+                <div style="color: #6b7280; font-size: 0.8rem; margin-bottom: 6px;">(Eenmalige Projectkosten)</div>
+                
+                <!-- Monthly price (hidden by default) -->
+                <div id="monthly-price-container" style="display: none; margin-bottom: 12px;">
+                    <div style="font-size: 1rem; color: #6b7280; margin: 6px 0;">+</div>
+                    <div id="monthly-price" style="font-size: 1.5rem; font-weight: bold; color: #e91e63; margin-bottom: 3px;">€50 / maand</div>
+                    <div style="color: #6b7280; font-size: 0.8rem;">(Maandelijks Support Plan)</div>
+                </div>
+                
+                <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.4; margin: 0 0 15px 0; max-width: 350px; margin-left: auto; margin-right: auto; padding: 0 8px;">Dit is een ruwe schatting. De uiteindelijke prijs kan hoger of lager uitvallen op basis van je specifieke eisen.</p>
+                
+                <a href="https://autoflow.neetocal.com/meeting-with-auto-flow" target="_blank" id="proceed-button" style="display: inline-block; background: linear-gradient(135deg, #e91e63, #9c27b0); color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3); border: none; cursor: pointer; max-width: 100%; box-sizing: border-box;">Plan een gratis consultatie</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Chat Bot Modal -->
+    <div id="chatbot-modal-overlay" class="chat-modal-overlay">
+        <div id="chatbot-modal" class="chat-modal">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-bot-avatar">🤖</div>
+                    <div class="chat-header-text">
+                        <h3>AI Assistent</h3>
+                        <p>AutoFlow Studio Bot</p>
+                    </div>
+                </div>
+                <button id="close-chatbot-modal-btn" class="chat-close-btn">&times;</button>
+            </div>
+
+            <!-- Chat Container -->
+            <div class="chat-container">
+                <div class="chat-messages">
+                    <div class="message received">
+                        <p>Hallo! Hoe kan ik je helpen met je automatiseringsbehoeften vandaag?</p>
+                    </div>
+                </div>
+                
+                <!-- Chat Input Area -->
+                <div class="chat-input-area">
+                    <button id="chat-upload-btn" title="Bestand uploaden">📎</button>
+                    <div class="chat-input-container">
+                        <input type="text" id="chat-input" placeholder="Typ je bericht...">
+                    </div>
+                    <button class="chat-send-btn" title="Verstuur bericht">
+                        Verstuur
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/carousel.js"></script>
+    <script src="../../js/tools.js"></script>
+    <script src="../../js/cookies-banner.js"></script>
+</body>
+</html>

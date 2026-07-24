@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
+  <url><loc>https://www.autoflowstudio.net/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.autoflowstudio.net/contact</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/contact</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.autoflowstudio.net/portfolio</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/portfolio</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/</loc><lastmod>2025-01-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Projects / Case Studies -->
+  <url><loc>https://www.autoflowstudio.net/projects/project-1</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/projects/project-1</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.autoflowstudio.net/projects/project-2</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/projects/project-2</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.autoflowstudio.net/projects/project-3</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/projects/project-3</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.autoflowstudio.net/projects/project-4</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/projects/project-4</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog Posts (English) -->
+  <url><loc>https://www.autoflowstudio.net/blog/10-repetitive-tasks</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/5-signs</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/5-ways-to-customer</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/automation-intro</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/bottlenecks-guide</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/documents-drowning</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/e-commerce-smes</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/guide-for-sme</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/hidden-cost</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/how-to-choose</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/invoicing-guide</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/no-code-outgrown</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/outgrown-zapier</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/working-for-you</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/zapier-expert</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/zapier-vs-custom</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/bpa-guide</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/blog/bpa-vs-workflow</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog Posts (Dutch) -->
+  <url><loc>https://www.autoflowstudio.net/nl/blog/10-repetitive-tasks</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/5-signs</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/5-ways-to-customer</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/automation-intro</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/bottlenecks-guide</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/documents-drowning</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/e-commerce-smes</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/guide-for-sme</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/hidden-cost</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/how-to-choose</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/invoicing-guide</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/no-code-outgrown</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/outgrown-zapier</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/working-for-you</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/zapier-expert</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/zapier-vs-custom</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/bpa-guide</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.autoflowstudio.net/nl/blog/bpa-vs-workflow</loc><lastmod>2025-01-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Policies -->
+  <url><loc>https://www.autoflowstudio.net/privacy-policy</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.autoflowstudio.net/cookie-policy</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+*.py[cod]
+scratch/
+
+# Large media & data files
+*.zip
+*.csv
+*.mp4
+*.mov
+supabase/migrations/*.csv
+

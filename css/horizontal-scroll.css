@@ -1,0 +1,442 @@
+/* ========================================
+   HORIZONTAL SCROLL PROJECTS SECTION
+   ======================================== */
+
+.horizontal-scroll-section {
+    /* Mirrored Hero Image (Vertical Flip) - Perfect Left-Right Match */
+    background: url('../images/what-we-build-bg-mirrored.png') no-repeat center top;
+    background-size: cover;
+    /* Fixes "not full size" issue */
+
+    background-color: #0F1115 !important;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+    /* Removed shadow hacks */
+}
+
+/* Gradient Overlay for Smooth Top Transition */
+/* Gradient Overlay removed to fix black line issue */
+
+.section-header-sticky {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Gradient text for section title */
+.horizontal-scroll-section .section-title {
+    color: #F8FAFC !important;
+    background: none;
+    -webkit-text-fill-color: #F8FAFC;
+    font-weight: 800;
+}
+
+/* Mobile Horizontal Scroll */
+.horizontal-scroll-mobile {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 16px;
+    padding: 8vh 2.5vw;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 2.5vw;
+    cursor: grab;
+}
+
+.horizontal-scroll-mobile:active {
+    cursor: grabbing;
+}
+
+.horizontal-scroll-mobile::-webkit-scrollbar {
+    display: none;
+}
+
+/* Desktop Horizontal Scroll */
+.horizontal-scroll-desktop {
+    display: none;
+    gap: 48px;
+    padding: 0 96px;
+    width: max-content;
+    cursor: grab;
+}
+
+.horizontal-scroll-desktop:active {
+    cursor: grabbing;
+}
+
+/* Project Cards */
+.project-card {
+    flex-shrink: 0;
+    width: 85vw;
+    max-width: 500px;
+    background: #1A1D24;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    position: relative;
+}
+
+.project-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Project Image Wrapper */
+.project-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0F1115;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Timeline image placeholder for emoji icons */
+.timeline-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    color: white;
+}
+
+/* Image inside the placeholder */
+.project-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Individual gradient backgrounds */
+.project-card:nth-child(1) .timeline-image-placeholder {
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+}
+
+.project-card:nth-child(2) .timeline-image-placeholder {
+    background: linear-gradient(135deg, #9c27b0, #e91e63);
+}
+
+.project-card:nth-child(3) .timeline-image-placeholder {
+    background: linear-gradient(135deg, #e91e63, #c2185b);
+}
+
+.project-card:nth-child(4) .timeline-image-placeholder {
+    background: linear-gradient(135deg, #8e24aa, #9c27b0);
+}
+
+.project-card:nth-child(5) .timeline-image-placeholder {
+    background: linear-gradient(135deg, #e91e63, #ad1457);
+}
+
+.project-image-wrapper .video-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Project Badges */
+.project-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.badge-blue {
+    background: rgba(233, 30, 99, 0.15);
+    color: #f48fb1;
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.badge-purple {
+    background: rgba(156, 39, 176, 0.15);
+    color: #ce93d8;
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.badge-green {
+    background: rgba(233, 30, 99, 0.15);
+    color: #f48fb1;
+    border: 1px solid rgba(233, 30, 99, 0.2);
+}
+
+.badge-orange {
+    background: rgba(156, 39, 176, 0.15);
+    color: #ce93d8;
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+/* Project Content */
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #F8FAFC 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Project Features */
+.project-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #94A3B8;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.feature-item svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    padding: 2px;
+    color: #e91e63;
+}
+
+.feature-item p {
+    color: #6b7280;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CTA Card */
+.cta-card {
+    background: linear-gradient(135deg, #0F1E19 0%, #1a2f28 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 60vh;
+    max-height: 60vh;
+}
+
+.cta-content {
+    padding: 32px;
+}
+
+.cta-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.cta-button-scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+}
+
+.cta-button-scroll:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(233, 30, 99, 0.4);
+}
+
+/* Scroll Hint */
+.scroll-hint {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+.scroll-hint-text {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #9ca3af;
+}
+
+/* ========================================
+   DESKTOP STYLES (768px and up)
+   ======================================== */
+
+@media (min-width: 768px) {
+    .horizontal-scroll-section {
+        padding: 120px 0;
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section-header-sticky {
+        position: sticky;
+        top: 80px;
+        padding-bottom: 60px;
+    }
+
+    /* Keep mobile scroll visible on all screens */
+    .horizontal-scroll-mobile {
+        padding: 8vh 4vw;
+    }
+
+    .horizontal-scroll-desktop {
+        display: none;
+    }
+
+    /* Desktop Project Cards */
+    .project-card {
+        width: 75vw;
+        max-width: 1200px;
+        height: 70vh;
+        padding: 56px;
+        border-radius: 48px;
+        flex-direction: row;
+        gap: 56px;
+    }
+
+    .project-image-wrapper {
+        width: 50%;
+        aspect-ratio: auto;
+        height: 100%;
+        min-height: 60vh;
+        border-radius: 32px;
+    }
+
+    .project-badge {
+        top: 16px;
+        left: 16px;
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    .project-content {
+        width: 50%;
+        justify-content: center;
+    }
+
+    .project-content h3 {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+
+    .project-features {
+        gap: 24px;
+    }
+
+    .feature-item svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .feature-item p {
+        font-size: 20px;
+    }
+
+    /* CTA Card Desktop */
+    .cta-card {
+        width: 50vw;
+        max-width: 800px;
+        height: 70vh;
+        border-radius: 48px;
+    }
+
+    .cta-content h3 {
+        font-size: 48px;
+    }
+
+    .cta-button-scroll {
+        font-size: 18px;
+        padding: 16px 40px;
+    }
+
+    .scroll-hint {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* ========================================
+   LARGE DESKTOP (1024px and up)
+   ======================================== */
+
+@media (min-width: 1024px) {
+    .project-card {
+        width: 65vw;
+        height: 70vh;
+    }
+
+    .project-content h3 {
+        font-size: 44px;
+    }
+
+    .feature-item p {
+        font-size: 22px;
+    }
+}
+
+/* ========================================
+   SEAMLESS TRANSITIONS
+   ======================================== */
+
+/* Section 2: Carousel */
+.work-examples {
+    background: transparent;
+    position: relative;
+}
+
+/* Universal Background Container */
+.universal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
+    overflow: hidden;
+}

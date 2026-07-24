@@ -1,0 +1,42 @@
+services:
+  # Local LLM Engine
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: always
+
+  # The Automation Agent (Lead Scoring, Scrapers, etc.)
+  agent:
+    build: ./services/agent
+    container_name: automation_agent
+    depends_on:
+      - ollama
+    env_file: .env
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+    volumes:
+
+      - ./services/agent:/app
+      - ./data:/app/data
+    restart: always
+
+  # Deployment Listener (The "Auto-Update" heart)
+  deployer:
+    build: ./services/deployer
+    container_name: deployer
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - .:/app/repo
+    environment:
+      - DEPLOY_TOKEN=${DEPLOY_TOKEN:-secret_token_123}
+    restart: always
+
+volumes:
+  ollama_data:

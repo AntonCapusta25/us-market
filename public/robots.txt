@@ -1,0 +1,16 @@
+# AutoFlow Studio Robots.txt
+User-agent: *
+Allow: /
+Allow: /nl/
+Allow: /blog/
+Allow: /portfolio/
+Allow: /contact/
+
+# Block Admin and Private Tools
+Disallow: /admin/
+Disallow: /admin/*
+Disallow: /outreach/
+Disallow: /segments/
+
+# Sitemap
+Sitemap: https://www.autoflowstudio.net/sitemap.xml
