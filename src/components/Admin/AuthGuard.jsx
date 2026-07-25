@@ -96,9 +96,9 @@ function AuthGuardContent({ children }) {
                     fontSize: '2.75rem',
                     letterSpacing: '1px',
                     fontFamily: "'Space Grotesk', 'Inter', sans-serif",
-                    color: isFlow ? '#d1bbfb' : '#F8FAFC',
+                    color: isFlow ? '#C99F4A' : '#F8FAFC',
                     // Apply gradient text effect to the "Flow" part
-                    background: isFlow ? 'linear-gradient(135deg, #d1bbfb, #5646e4)' : 'none',
+                    background: isFlow ? 'linear-gradient(135deg, #C99F4A, #1B365D)' : 'none',
                     WebkitBackgroundClip: isFlow ? 'text' : 'none',
                     WebkitTextFillColor: isFlow ? 'transparent' : 'none',
                     animation: 'letter-bounce 1.6s ease-in-out infinite',
@@ -127,7 +127,7 @@ function AuthGuardContent({ children }) {
               position: 'absolute',
               top: 0,
               height: '100%',
-              background: 'linear-gradient(90deg, transparent, #d1bbfb, #5646e4, transparent)',
+              background: 'linear-gradient(90deg, transparent, #C99F4A, #1B365D, transparent)',
               borderRadius: '10px',
               animation: 'bar-sweep 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite'
             }} />

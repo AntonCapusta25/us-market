@@ -313,7 +313,7 @@ export default function AdminDashboard() {
       return [x, y]
     }
 
-    const colors = ['#d1bbfb', '#3b82f6', '#10b981', '#f59e0b', '#5646e4']
+    const colors = ['#C99F4A', '#3b82f6', '#10b981', '#f59e0b', '#1B365D']
 
     return (
       <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
@@ -430,7 +430,7 @@ export default function AdminDashboard() {
                 position: 'absolute',
                 top: 0,
                 height: '100%',
-                background: 'linear-gradient(90deg, transparent, #d1bbfb, #5646e4, transparent)',
+                background: 'linear-gradient(90deg, transparent, #C99F4A, #1B365D, transparent)',
                 borderRadius: '10px',
                 animation: 'dash-bar-sweep 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite'
               }} />
@@ -789,24 +789,24 @@ export default function AdminDashboard() {
                                 <tr key={item.id} style={{ 
                                   borderBottom: '1px solid rgba(255,255,255,0.04)', 
                                   fontSize: '0.9rem', 
-                                  background: isCurrentUser ? 'rgba(209, 187, 251, 0.05)' : 'transparent',
+                                  background: isCurrentUser ? 'rgba(201, 159, 74, 0.05)' : 'transparent',
                                   fontWeight: isCurrentUser ? 700 : 500,
                                   transition: 'all 0.2s'
                                 }}>
                                   <td style={{ padding: '16px 10px', fontSize: '1.1rem', color: idx === 0 ? '#fbbf24' : idx === 1 ? '#cbd5e1' : idx === 2 ? '#cd7f32' : '#64748B' }}>
                                     {idx === 0 ? '🏆 1' : idx === 1 ? '🥈 2' : idx === 2 ? '🥉 3' : `${idx + 1}`}
                                   </td>
-                                  <td style={{ padding: '16px 10px', color: isCurrentUser ? '#d1bbfb' : 'white' }}>
-                                    {item.name} {isCurrentUser && <span style={{ fontSize: '0.7rem', background: '#d1bbfb', color: 'white', padding: '2px 8px', borderRadius: '20px', marginLeft: '8px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>You</span>}
+                                  <td style={{ padding: '16px 10px', color: isCurrentUser ? '#C99F4A' : 'white' }}>
+                                    {item.name} {isCurrentUser && <span style={{ fontSize: '0.7rem', background: '#C99F4A', color: 'white', padding: '2px 8px', borderRadius: '20px', marginLeft: '8px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>You</span>}
                                   </td>
                                   <td style={{ padding: '16px 10px', color: '#cbd5e1' }}>{item.totalLeads}</td>
                                   <td style={{ padding: '16px 10px', color: '#10b981', fontWeight: 700 }}>{item.convertedLeads}</td>
                                   <td style={{ padding: '16px 10px', color: '#3b82f6' }}>{item.callsLogged}</td>
                                   <td style={{ padding: '16px 10px' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                      <span style={{ color: '#d1bbfb', fontWeight: 700, width: '40px' }}>{item.conversionRate}%</span>
+                                      <span style={{ color: '#C99F4A', fontWeight: 700, width: '40px' }}>{item.conversionRate}%</span>
                                       <div style={{ width: '80px', height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px', overflow: 'hidden' }}>
-                                        <div style={{ width: `${item.conversionRate}%`, height: '100%', background: 'linear-gradient(90deg, #d1bbfb, #5646e4)', borderRadius: '10px' }} />
+                                        <div style={{ width: `${item.conversionRate}%`, height: '100%', background: 'linear-gradient(90deg, #C99F4A, #1B365D)', borderRadius: '10px' }} />
                                       </div>
                                     </div>
                                   </td>

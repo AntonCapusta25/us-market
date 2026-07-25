@@ -1377,7 +1377,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
           <button onClick={deleteAllLeads} disabled={isActionLoading} style={{ padding: '10px 20px', background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.2)', color: '#ef4444', borderRadius: '12px', cursor: 'pointer', fontWeight: 600, fontSize: '0.9rem' }}>
             {isActionLoading ? 'Deleting...' : 'Delete All'}
           </button>
-          <button onClick={() => setShowImportModal(true)} style={{ padding: '10px 20px', background: 'linear-gradient(135deg, #e91e63, #9c27b0)', color: 'white', borderRadius: '12px', cursor: 'pointer', fontWeight: 600, fontSize: '0.9rem', border: 'none' }}>
+          <button onClick={() => setShowImportModal(true)} style={{ padding: '10px 20px', background: 'linear-gradient(135deg, #C99F4A, #1B365D)', color: 'white', borderRadius: '12px', cursor: 'pointer', fontWeight: 600, fontSize: '0.9rem', border: 'none' }}>
             {isImporting ? 'Importing...' : 'Upload CSV'}
           </button>
           <button onClick={() => fetchLeads()} style={{ padding: '10px 20px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', borderRadius: '12px', cursor: 'pointer' }}>Refresh</button>
@@ -1417,9 +1417,9 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
               style={{
                 padding: '9px 18px', borderRadius: '12px', fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer',
                 border: viewMode === t.id ? 'none' : '1px solid rgba(255,255,255,0.1)',
-                background: viewMode === t.id ? 'linear-gradient(135deg, #e91e63, #9c27b0)' : 'rgba(255,255,255,0.03)',
+                background: viewMode === t.id ? 'linear-gradient(135deg, #C99F4A, #1B365D)' : 'rgba(255,255,255,0.03)',
                 color: viewMode === t.id ? 'white' : '#94A3B8',
-                boxShadow: viewMode === t.id ? '0 4px 15px rgba(233,30,99,0.3)' : 'none',
+                boxShadow: viewMode === t.id ? '0 4px 15px rgba(201,159,74,0.3)' : 'none',
                 transition: 'all 0.2s'
               }}
             >
@@ -2131,13 +2131,13 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                 disabled={isScraping}
                 style={{ 
                   padding: '12px 24px', 
-                  background: '#6366f1', 
+                  background: '#C99F4A', 
                   color: 'white', 
                   borderRadius: '12px', 
                   border: 'none', 
                   cursor: 'pointer', 
                   fontWeight: 700, 
-                  boxShadow: '0 4px 12px rgba(99, 102, 241, 0.3)',
+                  boxShadow: '0 4px 12px rgba(201, 159, 74, 0.3)',
                   opacity: isScraping ? 0.7 : 1,
                   display: 'flex',
                   alignItems: 'center',
@@ -2421,7 +2421,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                   }
                 }}
                 disabled={emailSending}
-                style={{ flex: 1, padding: '14px', background: 'linear-gradient(135deg, #e91e63, #9c27b0)', border: 'none', color: 'white', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+                style={{ flex: 1, padding: '14px', background: 'linear-gradient(135deg, #C99F4A, #1B365D)', border: 'none', color: 'white', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
               >
                 {emailSending ? (
                   <>

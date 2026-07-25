@@ -191,14 +191,14 @@ export default function AdminLayout({ children }) {
 
       {isImpersonating && (
         <div style={{
-          background: 'linear-gradient(90deg, #5646e4, #d1bbfb)',
+          background: 'linear-gradient(90deg, #1B365D, #C99F4A)',
           color: 'white',
           padding: '12px 24px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           borderBottom: '1px solid rgba(255, 255, 255, 0.15)',
-          boxShadow: '0 4px 20px rgba(209, 187, 251, 0.15)',
+          boxShadow: '0 4px 20px rgba(201, 159, 74, 0.15)',
           zIndex: 1000,
           fontFamily: "'Space Grotesk', 'Inter', sans-serif"
         }}>
@@ -350,7 +350,7 @@ export default function AdminLayout({ children }) {
                 width: '36px',
                 height: '36px',
                 borderRadius: '50%',
-                background: profile?.role === 'admin' ? 'linear-gradient(135deg, #d1bbfb, #5646e4)' : profile?.role === 'Napoleon' ? 'linear-gradient(135deg, #a855f7, #d1bbfb)' : 'linear-gradient(135deg, #3b82f6, #10b981)',
+                background: profile?.role === 'admin' ? 'linear-gradient(135deg, #C99F4A, #1B365D)' : profile?.role === 'Napoleon' ? 'linear-gradient(135deg, #C99F4A, #ffffff)' : 'linear-gradient(135deg, #3b82f6, #10b981)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -461,14 +461,14 @@ export default function AdminLayout({ children }) {
                     position: 'absolute',
                     top: '-4px',
                     right: '-4px',
-                    background: 'linear-gradient(135deg, #d1bbfb, #5646e4)',
+                    background: 'linear-gradient(135deg, #C99F4A, #1B365D)',
                     color: 'white',
                     fontSize: '0.65rem',
                     fontWeight: 800,
                     borderRadius: '10px',
                     padding: '2px 6px',
                     border: '2px solid #0a0a0a',
-                    boxShadow: '0 0 10px rgba(209, 187, 251, 0.4)'
+                    boxShadow: '0 0 10px rgba(201, 159, 74, 0.4)'
                   }}>
                     {unreadCount}
                   </span>
@@ -530,11 +530,11 @@ export default function AdminLayout({ children }) {
                             transition: 'background 0.2s'
                           }}
                           onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.02)'}
-                          onMouseOut={e => e.currentTarget.style.background = notif.is_read ? 'transparent' : 'rgba(209, 187, 251, 0.03)'}
+                          onMouseOut={e => e.currentTarget.style.background = notif.is_read ? 'transparent' : 'rgba(201, 159, 74, 0.03)'}
                         >
                           <div style={{
                             width: '8px', height: '8px', borderRadius: '50%',
-                            background: notif.is_read ? 'transparent' : 'linear-gradient(135deg, #d1bbfb, #5646e4)',
+                            background: notif.is_read ? 'transparent' : 'linear-gradient(135deg, #C99F4A, #1B365D)',
                             marginTop: '6px', flexShrink: 0
                           }} />
                           <div style={{ flex: 1, minWidth: 0 }}>

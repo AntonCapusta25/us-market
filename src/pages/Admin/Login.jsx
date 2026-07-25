@@ -70,7 +70,7 @@ export default function AdminLogin() {
           <button 
             type="submit" disabled={loading}
             style={{ 
-              marginTop: '8px', padding: '14px', background: 'linear-gradient(135deg, #d1bbfb, #5646e4)', color: 'white', 
+              marginTop: '8px', padding: '14px', background: 'linear-gradient(135deg, #C99F4A, #1B365D)', color: 'white', 
               border: 'none', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', transition: 'all 0.2s',
               opacity: loading ? 0.7 : 1
             }}

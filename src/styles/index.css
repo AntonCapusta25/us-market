@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #bfa3ff; /* Vibrant bright lilac purple */
-    --primary-gradient: linear-gradient(135deg, #bfa3ff, #8d5bf7);
-    --primary-glow: rgba(191, 163, 255, 0.45);
+    --primary-color: #C99F4A; /* Gold */
+    --primary-gradient: linear-gradient(135deg, #C99F4A, #1B365D); /* Gold to Navy Blue */
+    --primary-glow: rgba(201, 159, 74, 0.45);
 }
 
 /* AutoFlow Studio - Main Styles */
@@ -5136,7 +5136,7 @@ body {
 
 .text-gradient {
     color: transparent;
-    background: linear-gradient(to right, var(--primary-color), #5646e4);
+    background: linear-gradient(to right, var(--primary-color), #1B365D);
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -5511,7 +5511,7 @@ body {
 }
 
 .cookies-text a:hover {
-    color: #5646e4;
+    color: #1B365D;
     text-decoration: underline;
 }
 
@@ -5934,7 +5934,7 @@ body {
 }
 
 .project-card:nth-child(2) .timeline-image-placeholder {
-    background: linear-gradient(135deg, #5646e4, var(--primary-color));
+    background: linear-gradient(135deg, #1B365D, var(--primary-color));
 }
 
 .project-card:nth-child(3) .timeline-image-placeholder {
@@ -5942,7 +5942,7 @@ body {
 }
 
 .project-card:nth-child(4) .timeline-image-placeholder {
-    background: linear-gradient(135deg, #8e24aa, #5646e4);
+    background: linear-gradient(135deg, #1B365D, #C99F4A);
 }
 
 .project-card:nth-child(5) .timeline-image-placeholder {

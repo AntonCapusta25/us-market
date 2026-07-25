@@ -334,14 +334,14 @@ export default function AdminEmailSettings() {
             onClick={handleOpenCreate}
             style={{
               padding: '10px 20px',
-              background: 'linear-gradient(135deg, #d1bbfb, #5646e4)',
+              background: 'linear-gradient(135deg, #C99F4A, #1B365D)',
               border: 'none',
               borderRadius: '12px',
               fontSize: '0.85rem',
               fontWeight: 700,
               color: 'white',
               cursor: 'pointer',
-              boxShadow: '0 8px 20px rgba(209, 187, 251, 0.25)',
+              boxShadow: '0 8px 20px rgba(201, 159, 74, 0.25)',
               transition: 'transform 0.2s'
             }}
             onMouseEnter={e => e.target.style.transform = 'translateY(-1px)'}
@@ -792,7 +792,7 @@ export default function AdminEmailSettings() {
                       setWizardStep(prev => prev + 1)
                     }}
                     style={{
-                      padding: '10px 24px', background: 'linear-gradient(135deg, #d1bbfb, #5646e4)',
+                      padding: '10px 24px', background: 'linear-gradient(135deg, #C99F4A, #1B365D)',
                       border: 'none', color: 'white', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', fontSize: '0.85rem'
                     }}
                   >

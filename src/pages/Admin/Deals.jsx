@@ -203,9 +203,9 @@ export default function AdminDeals() {
         {isAdmin ? (<>
           <StatCard label="Total Revenue" value={fmt(totalRevenue)} color="#10b981" icon="💰" />
           <StatCard label="Admin Share (60%)" value={fmt(totalRevenue * 0.60)} color="#3b82f6" icon="🏦" />
-          <StatCard label="Napoleon Share (30%)" value={fmt(totalRevenue * 0.30)} color="#a855f7" icon="👑" />
+          <StatCard label="Napoleon Share (30%)" value={fmt(totalRevenue * 0.30)} color="#C99F4A" icon="👑" />
           <StatCard label="Sales Team Share (10%)" value={fmt(totalRevenue * 0.10)} color="#f59e0b" icon="🤝" />
-          <StatCard label="Won Deals" value={wonDeals.length} color="#d1bbfb" icon="🏆" />
+          <StatCard label="Won Deals" value={wonDeals.length} color="#1B365D" icon="🏆" />
         </>) : (<>
           <StatCard label={`My Commission (${profile?.role === 'Napoleon' ? '30%' : '5%'})`} value={fmt(myCommission)} color="#f59e0b" icon="💸" />
           <StatCard label="My Won Deals" value={myWonDeals.length} color="#3b82f6" icon="🏆" />
@@ -233,22 +233,22 @@ export default function AdminDeals() {
               return (
                 <div key={sp.id} style={{ display: 'grid', gridTemplateColumns: '150px 1fr 120px 130px 130px 130px', alignItems: 'center', gap: '16px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: isNap ? 'linear-gradient(135deg, #a855f7, #d1bbfb)' : 'linear-gradient(135deg, #d1bbfb, #5646e4)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, color: 'white', flexShrink: 0 }}>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: isNap ? 'linear-gradient(135deg, #C99F4A, #ffffff)' : 'linear-gradient(135deg, #C99F4A, #1B365D)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, color: 'white', flexShrink: 0 }}>
                       {(sp.name || sp.email || '?').charAt(0).toUpperCase()}
                     </div>
                     <span style={{ color: 'white', fontSize: '0.85rem', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                       {sp.name || sp.email?.split('@')[0]}
-                      <span style={{ fontSize: '0.65rem', color: isNap ? '#c084fc' : '#64748B', marginLeft: '6px', textTransform: 'uppercase', fontWeight: 800 }}>
+                      <span style={{ fontSize: '0.65rem', color: isNap ? '#C99F4A' : '#64748B', marginLeft: '6px', textTransform: 'uppercase', fontWeight: 800 }}>
                         {sp.role}
                       </span>
                     </span>
                   </div>
                   <div style={{ height: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px', overflow: 'hidden' }}>
-                    <div style={{ width: `${(sp.revenue / maxRev) * 100}%`, height: '100%', background: isNap ? 'linear-gradient(90deg, #a855f7, #d1bbfb)' : 'linear-gradient(90deg, #d1bbfb, #5646e4)', borderRadius: '10px', transition: 'width 0.6s ease' }} />
+                    <div style={{ width: `${(sp.revenue / maxRev) * 100}%`, height: '100%', background: isNap ? 'linear-gradient(90deg, #C99F4A, #ffffff)' : 'linear-gradient(90deg, #C99F4A, #1B365D)', borderRadius: '10px', transition: 'width 0.6s ease' }} />
                   </div>
                   <span style={{ color: '#10b981', fontWeight: 700, fontSize: '0.9rem', textAlign: 'right' }}>{fmt(sp.revenue)}</span>
                   <span style={{ color: '#3b82f6', fontWeight: 600, fontSize: '0.85rem', textAlign: 'right' }}>+{fmt(sp.revenue * 0.60)}</span>
-                  <span style={{ color: '#a855f7', fontWeight: 600, fontSize: '0.85rem', textAlign: 'right' }}>+{fmt(sp.revenue * 0.30)}</span>
+                  <span style={{ color: '#C99F4A', fontWeight: 600, fontSize: '0.85rem', textAlign: 'right' }}>+{fmt(sp.revenue * 0.30)}</span>
                   <span style={{ color: '#f59e0b', fontWeight: 600, fontSize: '0.85rem', textAlign: 'right' }}>+{fmt(sp.revenue * 0.10)}</span>
                 </div>
               )
