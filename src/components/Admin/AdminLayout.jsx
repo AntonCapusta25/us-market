@@ -84,7 +84,7 @@ export default function AdminLayout({ children }) {
 
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#050505', color: '#F8FAFC', fontFamily: '"Space Grotesk", sans-serif' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: '"Space Grotesk", sans-serif' }}>
       <style>{`
         @media (max-width: 768px) {
           .admin-sidebar {
@@ -274,7 +274,7 @@ export default function AdminLayout({ children }) {
         }}>
           <div style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: isCollapsed ? 'center' : 'space-between' }}>
             {!isCollapsed && (
-              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.25rem', fontWeight: 800, margin: 0 }}>
+              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.25rem', fontWeight: 800, margin: 0, color: 'white' }}>
                 Finder<span style={{ color: '#d1bbfb' }}> admin</span>
               </h2>
             )}
@@ -390,7 +390,7 @@ export default function AdminLayout({ children }) {
             onMouseOut={e => e.currentTarget.style.background = 'transparent'}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-            {!isCollapsed && <span>Logout</span>}
+            {!isCollapsed && <span style={{ color: '#ef4444' }}>Logout</span>}
           </button>
         </aside>
 
@@ -399,8 +399,8 @@ export default function AdminLayout({ children }) {
           {/* Header Bar */}
           <header className="admin-header" style={{
             height: '70px',
-            background: '#0a0a0a',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            background: '#ffffff',
+            borderBottom: '1px solid #e2e8f0',
             padding: '0 40px',
             display: 'flex',
             alignItems: 'center',
@@ -413,9 +413,9 @@ export default function AdminLayout({ children }) {
                 onClick={() => setIsMobileMenuOpen(true)}
                 style={{
                   display: 'none',
-                  background: 'rgba(255,255,255,0.05)',
+                  background: 'rgba(0,0,0,0.05)',
                   border: 'none',
-                  color: 'white',
+                  color: '#0f172a',
                   padding: '8px',
                   borderRadius: '8px',
                   cursor: 'pointer',
@@ -429,7 +429,7 @@ export default function AdminLayout({ children }) {
                   <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
               </button>
-              <h2 className="admin-header-title" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.25rem', fontWeight: 800, margin: 0, color: 'white' }}>
+              <h2 className="admin-header-title" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.25rem', fontWeight: 800, margin: 0, color: '#0F172A' }}>
                 {getPageTitle()}
               </h2>
             </div>
@@ -437,11 +437,11 @@ export default function AdminLayout({ children }) {
               <button
                 onClick={(e) => { e.stopPropagation(); setIsNotifOpen(!isNotifOpen); }}
                 style={{
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.06)',
+                  background: 'rgba(0,0,0,0.03)',
+                  border: '1px solid rgba(0,0,0,0.06)',
                   padding: '10px',
                   borderRadius: '12px',
-                  color: unreadCount > 0 ? '#d1bbfb' : '#94A3B8',
+                  color: unreadCount > 0 ? '#C99F4A' : '#64748B',
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
@@ -449,8 +449,8 @@ export default function AdminLayout({ children }) {
                   position: 'relative',
                   transition: 'all 0.2s'
                 }}
-                onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.06)'}
-                onMouseOut={e => e.currentTarget.style.background = 'rgba(255,255,255,0.03)'}
+                onMouseOver={e => e.currentTarget.style.background = 'rgba(0,0,0,0.06)'}
+                onMouseOut={e => e.currentTarget.style.background = 'rgba(0,0,0,0.03)'}
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
@@ -467,7 +467,7 @@ export default function AdminLayout({ children }) {
                     fontWeight: 800,
                     borderRadius: '10px',
                     padding: '2px 6px',
-                    border: '2px solid #0a0a0a',
+                    border: '2px solid #ffffff',
                     boxShadow: '0 0 10px rgba(201, 159, 74, 0.4)'
                   }}>
                     {unreadCount}
@@ -484,25 +484,25 @@ export default function AdminLayout({ children }) {
                     top: '55px',
                     right: 0,
                     width: '360px',
-                    background: '#0a0a0a',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    background: '#ffffff',
+                    border: '1px solid #e2e8f0',
                     borderRadius: '16px',
-                    boxShadow: '0 10px 40px rgba(0,0,0,0.6)',
+                    boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
                     zIndex: 1000,
                     display: 'flex',
                     flexDirection: 'column',
                     overflow: 'hidden'
                   }}
                 >
-                  <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontWeight: 800, fontSize: '0.9rem', color: 'white', fontFamily: "'Space Grotesk', sans-serif" }}>Notifications</span>
+                  <div style={{ padding: '16px 20px', borderBottom: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontWeight: 800, fontSize: '0.9rem', color: '#0f172a', fontFamily: "'Space Grotesk', sans-serif" }}>Notifications</span>
                     {unreadCount > 0 && (
-                      <button
-                        onClick={markAllAsRead}
-                        style={{ background: 'none', border: 'none', color: '#d1bbfb', fontSize: '0.75rem', fontWeight: 700, cursor: 'pointer' }}
-                      >
-                        Mark all read
-                      </button>
+                       <button
+                         onClick={markAllAsRead}
+                         style={{ background: 'none', border: 'none', color: '#C99F4A', fontSize: '0.75rem', fontWeight: 700, cursor: 'pointer' }}
+                       >
+                         Mark all read
+                       </button>
                     )}
                   </div>
                   <div style={{ maxHeight: '320px', overflowY: 'auto' }}>
@@ -521,15 +521,15 @@ export default function AdminLayout({ children }) {
                           }}
                           style={{
                             padding: '14px 20px',
-                            borderBottom: '1px solid rgba(255, 255, 255, 0.04)',
-                            background: notif.is_read ? 'transparent' : 'rgba(209, 187, 251, 0.03)',
+                            borderBottom: '1px solid #f1f5f9',
+                            background: notif.is_read ? 'transparent' : 'rgba(201, 159, 74, 0.05)',
                             cursor: 'pointer',
                             display: 'flex',
                             gap: '12px',
                             alignItems: 'flex-start',
                             transition: 'background 0.2s'
                           }}
-                          onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.02)'}
+                          onMouseOver={e => e.currentTarget.style.background = 'rgba(0,0,0,0.02)'}
                           onMouseOut={e => e.currentTarget.style.background = notif.is_read ? 'transparent' : 'rgba(201, 159, 74, 0.03)'}
                         >
                           <div style={{
@@ -539,7 +539,7 @@ export default function AdminLayout({ children }) {
                           }} />
                           <div style={{ flex: 1, minWidth: 0 }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', gap: '8px', marginBottom: '2px' }}>
-                              <span style={{ fontWeight: 700, fontSize: '0.8rem', color: 'white', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              <span style={{ fontWeight: 700, fontSize: '0.8rem', color: '#0f172a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                                 {notif.title}
                               </span>
                               <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
@@ -587,7 +587,7 @@ export default function AdminLayout({ children }) {
                                 </button>
                               </div>
                             </div>
-                            <p style={{ margin: 0, fontSize: '0.75rem', color: '#94A3B8', lineHeight: 1.4, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
+                            <p style={{ margin: 0, fontSize: '0.75rem', color: '#64748B', lineHeight: 1.4, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
                               {notif.content}
                             </p>
                           </div>

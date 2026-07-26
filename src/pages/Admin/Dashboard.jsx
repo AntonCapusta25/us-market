@@ -286,8 +286,9 @@ export default function AdminDashboard() {
 
   const StatCard = ({ title, value, icon, color }) => (
     <div className="stat-card" style={{ 
-      background: '#0a0a0a', border: '1px solid rgba(255, 255, 255, 0.1)', 
-      borderRadius: '24px', padding: '32px', display: 'flex', alignItems: 'center', gap: '24px'
+      background: '#ffffff', border: '1px solid #e2e8f0', 
+      borderRadius: '24px', padding: '32px', display: 'flex', alignItems: 'center', gap: '24px',
+      boxShadow: '0 10px 30px rgba(0,0,0,0.03)'
     }}>
       <div style={{ 
         width: '64px', height: '64px', borderRadius: '16px', background: `${color}20`, 
@@ -296,8 +297,8 @@ export default function AdminDashboard() {
         {icon}
       </div>
       <div>
-        <p style={{ color: '#94A3B8', fontSize: '0.9rem', fontWeight: 500, margin: '0 0 4px' }}>{title}</p>
-        <h3 style={{ color: 'white', fontSize: '1.75rem', fontWeight: 800, margin: 0 }}>{value}</h3>
+        <p style={{ color: '#64748B', fontSize: '0.9rem', fontWeight: 500, margin: '0 0 4px' }}>{title}</p>
+        <h3 style={{ color: '#0f172a', fontSize: '1.75rem', fontWeight: 800, margin: 0 }}>{value}</h3>
       </div>
     </div>
   )
@@ -338,7 +339,7 @@ export default function AdminDashboard() {
                 />
               )
             })}
-            <circle cx="0" cy="0" r="0.65" fill="#0a0a0a" />
+            <circle cx="0" cy="0" r="0.65" fill="#ffffff" />
           </svg>
           <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
             {hoveredIndex !== null ? (
@@ -419,8 +420,8 @@ export default function AdminDashboard() {
             <div style={{
               width: '160px',
               height: '4px',
-              background: 'rgba(255, 255, 255, 0.05)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'rgba(0, 0, 0, 0.05)',
+              border: '1px solid rgba(0, 0, 0, 0.1)',
               borderRadius: '10px',
               overflow: 'hidden',
               position: 'relative',
@@ -455,10 +456,10 @@ export default function AdminDashboard() {
             }
             .dashboard-tabs {
               display: flex;
-              background: rgba(255,255,255,0.03);
+              background: #ffffff;
               padding: 6px;
               border-radius: 16px;
-              border: 1px solid rgba(255,255,255,0.05);
+              border: 1px solid #e2e8f0;
               overflow-x: auto;
             }
             .stat-grid {
@@ -541,8 +542,8 @@ export default function AdminDashboard() {
 
           <div className="dashboard-header">
             <div>
-              <h1 style={{ fontSize: '2.5rem', fontWeight: 900, margin: '0 0 8px', letterSpacing: '-0.02em' }}>Dashboard</h1>
-              <p style={{ color: '#94A3B8', fontSize: '1.1rem', fontWeight: 500 }}>Real-time growth analytics and activity.</p>
+              <h1 style={{ fontSize: '2.5rem', fontWeight: 900, margin: '0 0 8px', letterSpacing: '-0.02em', color: '#0f172a' }}>Dashboard</h1>
+              <p style={{ color: '#64748B', fontSize: '1.1rem', fontWeight: 500 }}>Real-time growth analytics and activity.</p>
             </div>
             <div className="dashboard-controls">
               {isAdmin && (
@@ -552,14 +553,14 @@ export default function AdminDashboard() {
                     value={assigneeFilter}
                     onChange={e => setAssigneeFilter(e.target.value)}
                     style={{
-                      padding: '10px 16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
-                      color: 'white', borderRadius: '12px', fontSize: '0.9rem', fontWeight: 600, outline: 'none', cursor: 'pointer', flex: 1
+                      padding: '10px 16px', background: '#ffffff', border: '1px solid #cbd5e1',
+                      color: '#0f172a', borderRadius: '12px', fontSize: '0.9rem', fontWeight: 600, outline: 'none', cursor: 'pointer', flex: 1
                     }}
                   >
-                    <option value="all" style={{ background: '#0a0a0a', color: 'white' }}>All Agents</option>
-                    <option value="unassigned" style={{ background: '#0a0a0a', color: 'white' }}>Unassigned Leads</option>
+                    <option value="all" style={{ background: '#ffffff', color: '#0f172a' }}>All Agents</option>
+                    <option value="unassigned" style={{ background: '#ffffff', color: '#0f172a' }}>Unassigned Leads</option>
                     {salespeople.map(sp => (
-                      <option key={sp.id} value={sp.id} style={{ background: '#0a0a0a', color: 'white' }}>{sp.name || sp.email}</option>
+                      <option key={sp.id} value={sp.id} style={{ background: '#ffffff', color: '#0f172a' }}>{sp.name || sp.email}</option>
                     ))}
                   </select>
                 </div>
@@ -572,8 +573,8 @@ export default function AdminDashboard() {
                     onClick={() => setActiveTab(tab)}
                     style={{ 
                       padding: '10px 24px', borderRadius: '12px', border: 'none', cursor: 'pointer', transition: 'all 0.2s',
-                      background: activeTab === tab ? '#d1bbfb' : 'transparent',
-                      color: activeTab === tab ? 'white' : '#94A3B8',
+                      background: activeTab === tab ? '#1B365D' : 'transparent',
+                      color: activeTab === tab ? 'white' : '#64748B',
                       fontWeight: 700, fontSize: '0.9rem', textTransform: 'capitalize'
                     }}
                   >
@@ -585,13 +586,13 @@ export default function AdminDashboard() {
           </div>
 
           <div className="stat-grid">
-            <StatCard title="Total Leads" value={stats.totalLeads} color="#d1bbfb" icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d1bbfb" strokeWidth="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>} />
+            <StatCard title="Total Leads" value={stats.totalLeads} color="#C99F4A" icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C99F4A" strokeWidth="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>} />
             <StatCard title="Booking Leads" value={stats.bookingLeads} color="#3b82f6" icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>} />
             <StatCard title="Contact Leads" value={stats.contactLeads} color="#10b981" icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>} />
             <StatCard title="Newsletters" value={stats.newsletterSubs} color="#f59e0b" icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>} />
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '32px', border: '1px solid rgba(255,255,255,0.05)', overflow: 'hidden' }}>
+          <div style={{ background: '#ffffff', borderRadius: '32px', border: '1px solid #e2e8f0', overflow: 'hidden', boxShadow: '0 10px 35px rgba(0,0,0,0.03)' }}>
             <div style={{ padding: '40px' }}>
               {activeTab === 'activity' && (
                 <div style={{ display: 'grid', gap: '16px' }}>
@@ -604,23 +605,23 @@ export default function AdminDashboard() {
                     return (
                       <div key={item.id} className="activity-item" style={{ 
                         display: 'flex', alignItems: 'center', gap: '20px', padding: '20px', 
-                        background: 'rgba(255,255,255,0.02)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.03)',
+                        background: '#f8fafc', borderRadius: '20px', border: '1px solid #e2e8f0',
                         transition: 'all 0.2s'
                       }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', width: '100%' }}>
                           <div style={{ 
-                            width: '44px', height: '44px', borderRadius: '12px', background: item.event_type === 'call' ? 'rgba(209, 187, 251, 0.1)' : 'rgba(59, 130, 246, 0.1)',
+                            width: '44px', height: '44px', borderRadius: '12px', background: item.event_type === 'call' ? 'rgba(201, 159, 74, 0.15)' : 'rgba(27, 54, 93, 0.15)',
                             display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
                           }}>
                             {item.event_type === 'call' ? (
-                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d1bbfb" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C99F4A" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                             ) : (
-                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B365D" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                             )}
                           </div>
                           <div style={{ flex: 1, minWidth: 0 }}>
-                            <p style={{ margin: '0 0 4px', color: 'white', fontWeight: 700, wordWrap: 'break-word', overflowWrap: 'break-word' }}>{lead ? lead.name : 'Unknown Lead'}</p>
-                            <p style={{ margin: 0, color: '#94A3B8', fontSize: '0.9rem', wordWrap: 'break-word', overflowWrap: 'break-word' }}>{item.content}</p>
+                            <p style={{ margin: '0 0 4px', color: '#0f172a', fontWeight: 700, wordWrap: 'break-word', overflowWrap: 'break-word' }}>{lead ? lead.name : 'Unknown Lead'}</p>
+                            <p style={{ margin: 0, color: '#64748B', fontSize: '0.9rem', wordWrap: 'break-word', overflowWrap: 'break-word' }}>{item.content}</p>
                           </div>
                         </div>
                         <div className="activity-time" style={{ textAlign: 'right' }}>
@@ -628,7 +629,7 @@ export default function AdminDashboard() {
                             {new Date(item.created_at).toLocaleDateString([], { month: 'short', day: 'numeric' })} at {new Date(item.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                           </p>
                           {agentName && (
-                            <p style={{ margin: '4px 0 0', color: '#d1bbfb', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                            <p style={{ margin: '4px 0 0', color: '#1B365D', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                               by {agentName}
                             </p>
                           )}
@@ -646,8 +647,8 @@ export default function AdminDashboard() {
                       <div style={{
                         width: '100px',
                         height: '3px',
-                        background: 'rgba(255, 255, 255, 0.05)',
-                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        background: 'rgba(0, 0, 0, 0.05)',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
                         borderRadius: '10px',
                         overflow: 'hidden',
                         position: 'relative',
@@ -658,7 +659,7 @@ export default function AdminDashboard() {
                           top: 0,
                           height: '100%',
                           width: '40%',
-                          background: 'linear-gradient(90deg, transparent, #d1bbfb, #3b82f6, transparent)',
+                          background: 'linear-gradient(90deg, transparent, #C99F4A, #1B365D, transparent)',
                           borderRadius: '10px',
                           animation: 'dash-bar-sweep 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite'
                         }} />
@@ -668,13 +669,13 @@ export default function AdminDashboard() {
                   </div>
                 ) : (
                   <div className="growth-grid">
-                    <div style={{ background: 'rgba(255,255,255,0.01)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.03)' }}>
-                      <h4 style={{ color: 'white', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800 }}>Leads Added (7 Days)</h4>
-                      <BarChart data={dailyData.dailyLeads} color="#d1bbfb" />
+                    <div style={{ background: '#f8fafc', padding: '32px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                      <h4 style={{ color: '#0f172a', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800 }}>Leads Added (7 Days)</h4>
+                      <BarChart data={dailyData.dailyLeads} color="#C99F4A" />
                     </div>
-                    <div style={{ background: 'rgba(255,255,255,0.01)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.03)' }}>
-                      <h4 style={{ color: 'white', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800 }}>Calls Logged (7 Days)</h4>
-                      <BarChart data={dailyData.dailyCalls} color="#3b82f6" />
+                    <div style={{ background: '#f8fafc', padding: '32px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                      <h4 style={{ color: '#0f172a', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800 }}>Calls Logged (7 Days)</h4>
+                      <BarChart data={dailyData.dailyCalls} color="#1B365D" />
                     </div>
                   </div>
                 )
@@ -687,8 +688,8 @@ export default function AdminDashboard() {
                       <div style={{
                         width: '100px',
                         height: '3px',
-                        background: 'rgba(255, 255, 255, 0.05)',
-                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        background: 'rgba(0, 0, 0, 0.05)',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
                         borderRadius: '10px',
                         overflow: 'hidden',
                         position: 'relative',
@@ -699,7 +700,7 @@ export default function AdminDashboard() {
                           top: 0,
                           height: '100%',
                           width: '40%',
-                          background: 'linear-gradient(90deg, transparent, #d1bbfb, #10b981, transparent)',
+                          background: 'linear-gradient(90deg, transparent, #C99F4A, #1B365D, transparent)',
                           borderRadius: '10px',
                           animation: 'dash-bar-sweep 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite'
                         }} />
@@ -709,26 +710,26 @@ export default function AdminDashboard() {
                   </div>
                 ) : (
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px' }}>
-                    <div style={{ background: 'rgba(255,255,255,0.01)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.03)' }}>
-                      <h4 style={{ color: 'white', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800, textAlign: 'center' }}>Status Distribution</h4>
+                    <div style={{ background: '#f8fafc', padding: '32px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                      <h4 style={{ color: '#0f172a', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800, textAlign: 'center' }}>Status Distribution</h4>
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <PieChart data={statusDistribution} />
                       </div>
                     </div>
-                    <div style={{ background: 'rgba(255,255,255,0.01)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.03)' }}>
-                      <h4 style={{ color: 'white', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800, textAlign: 'center' }}>Segment Distribution</h4>
+                    <div style={{ background: '#f8fafc', padding: '32px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                      <h4 style={{ color: '#0f172a', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800, textAlign: 'center' }}>Segment Distribution</h4>
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <PieChart data={segmentDistribution} />
                       </div>
                     </div>
-                    <div style={{ background: 'rgba(255,255,255,0.01)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.03)' }}>
-                      <h4 style={{ color: 'white', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800, textAlign: 'center' }}>Position Distribution</h4>
+                    <div style={{ background: '#f8fafc', padding: '32px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                      <h4 style={{ color: '#0f172a', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800, textAlign: 'center' }}>Position Distribution</h4>
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <PieChart data={positionDistribution} />
                       </div>
                     </div>
-                    <div style={{ background: 'rgba(255,255,255,0.01)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.03)' }}>
-                      <h4 style={{ color: 'white', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800, textAlign: 'center' }}>Location (State) Distribution</h4>
+                    <div style={{ background: '#f8fafc', padding: '32px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                      <h4 style={{ color: '#0f172a', marginBottom: '24px', fontSize: '1.1rem', fontWeight: 800, textAlign: 'center' }}>Location (State) Distribution</h4>
                       <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <PieChart data={stateDistribution} />
                       </div>
@@ -744,8 +745,8 @@ export default function AdminDashboard() {
                       <div style={{
                         width: '100px',
                         height: '3px',
-                        background: 'rgba(255, 255, 255, 0.05)',
-                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        background: 'rgba(0, 0, 0, 0.05)',
+                        border: '1px solid rgba(0, 0, 0, 0.1)',
                         borderRadius: '10px',
                         overflow: 'hidden',
                         position: 'relative',
@@ -756,7 +757,7 @@ export default function AdminDashboard() {
                           top: 0,
                           height: '100%',
                           width: '40%',
-                          background: 'linear-gradient(90deg, transparent, #fbbf24, #d1bbfb, transparent)',
+                          background: 'linear-gradient(90deg, transparent, #C99F4A, #1B365D, transparent)',
                           borderRadius: '10px',
                           animation: 'dash-bar-sweep 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite'
                         }} />
@@ -765,15 +766,15 @@ export default function AdminDashboard() {
                     </div>
                   </div>
                 ) : (
-                  <div style={{ background: 'rgba(255,255,255,0.01)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.03)' }}>
-                    <h4 style={{ color: 'white', marginBottom: '24px', fontSize: '1.2rem', fontWeight: 800 }}>Team Leaderboard</h4>
+                  <div style={{ background: '#f8fafc', padding: '32px', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                    <h4 style={{ color: '#0f172a', marginBottom: '24px', fontSize: '1.2rem', fontWeight: 800 }}>Team Leaderboard</h4>
                     {leaderboard.length === 0 ? (
                       <p style={{ color: '#64748B', fontSize: '0.9rem', textAlign: 'center', padding: '20px' }}>No salespeople stats available.</p>
                     ) : (
                       <div style={{ overflowX: 'auto' }}>
                         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
                           <thead>
-                            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', color: '#94A3B8', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                            <tr style={{ borderBottom: '1px solid #e2e8f0', color: '#64748B', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                               <th style={{ padding: '12px 10px', fontWeight: 600 }}>Rank</th>
                               <th style={{ padding: '12px 10px', fontWeight: 600 }}>Agent Name</th>
                               <th style={{ padding: '12px 10px', fontWeight: 600 }}>Total Leads</th>
@@ -787,25 +788,25 @@ export default function AdminDashboard() {
                               const isCurrentUser = item.id === user?.id
                               return (
                                 <tr key={item.id} style={{ 
-                                  borderBottom: '1px solid rgba(255,255,255,0.04)', 
+                                  borderBottom: '1px solid #f1f5f9', 
                                   fontSize: '0.9rem', 
-                                  background: isCurrentUser ? 'rgba(201, 159, 74, 0.05)' : 'transparent',
+                                  background: isCurrentUser ? 'rgba(201, 159, 74, 0.08)' : 'transparent',
                                   fontWeight: isCurrentUser ? 700 : 500,
                                   transition: 'all 0.2s'
                                 }}>
-                                  <td style={{ padding: '16px 10px', fontSize: '1.1rem', color: idx === 0 ? '#fbbf24' : idx === 1 ? '#cbd5e1' : idx === 2 ? '#cd7f32' : '#64748B' }}>
+                                  <td style={{ padding: '16px 10px', fontSize: '1.1rem', color: idx === 0 ? '#C99F4A' : idx === 1 ? '#64748b' : idx === 2 ? '#b45309' : '#64748B' }}>
                                     {idx === 0 ? '🏆 1' : idx === 1 ? '🥈 2' : idx === 2 ? '🥉 3' : `${idx + 1}`}
                                   </td>
-                                  <td style={{ padding: '16px 10px', color: isCurrentUser ? '#C99F4A' : 'white' }}>
+                                  <td style={{ padding: '16px 10px', color: isCurrentUser ? '#C99F4A' : '#0f172a' }}>
                                     {item.name} {isCurrentUser && <span style={{ fontSize: '0.7rem', background: '#C99F4A', color: 'white', padding: '2px 8px', borderRadius: '20px', marginLeft: '8px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>You</span>}
                                   </td>
-                                  <td style={{ padding: '16px 10px', color: '#cbd5e1' }}>{item.totalLeads}</td>
+                                  <td style={{ padding: '16px 10px', color: '#334155' }}>{item.totalLeads}</td>
                                   <td style={{ padding: '16px 10px', color: '#10b981', fontWeight: 700 }}>{item.convertedLeads}</td>
-                                  <td style={{ padding: '16px 10px', color: '#3b82f6' }}>{item.callsLogged}</td>
+                                  <td style={{ padding: '16px 10px', color: '#2563eb' }}>{item.callsLogged}</td>
                                   <td style={{ padding: '16px 10px' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                       <span style={{ color: '#C99F4A', fontWeight: 700, width: '40px' }}>{item.conversionRate}%</span>
-                                      <div style={{ width: '80px', height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px', overflow: 'hidden' }}>
+                                      <div style={{ width: '80px', height: '6px', background: 'rgba(0,0,0,0.05)', borderRadius: '10px', overflow: 'hidden' }}>
                                         <div style={{ width: `${item.conversionRate}%`, height: '100%', background: 'linear-gradient(90deg, #C99F4A, #1B365D)', borderRadius: '10px' }} />
                                       </div>
                                     </div>

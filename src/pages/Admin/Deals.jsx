@@ -144,8 +144,9 @@ export default function AdminDeals() {
           grid-template-columns: 1fr 360px;
         }
         .deal-detail-panel {
-          background: #0a0a0a;
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
           border-radius: 24px;
           padding: 28px;
           align-self: start;
@@ -186,12 +187,12 @@ export default function AdminDeals() {
           <p style={{ color: '#94A3B8', fontSize: '1.1rem', fontWeight: 500 }}>Track closed revenue and commission splits.</p>
         </div>
         {/* Status filter */}
-        <div style={{ display: 'flex', background: 'rgba(255,255,255,0.03)', padding: '6px', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ display: 'flex', background: '#ffffff', padding: '6px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
           {['all', 'pipeline', 'won', 'lost'].map(s => (
             <button key={s} onClick={() => setStatusFilter(s)} style={{
               padding: '9px 20px', borderRadius: '10px', border: 'none', cursor: 'pointer',
-              background: statusFilter === s ? '#d1bbfb' : 'transparent',
-              color: statusFilter === s ? 'white' : '#94A3B8',
+              background: statusFilter === s ? '#1B365D' : 'transparent',
+              color: statusFilter === s ? 'white' : '#64748B',
               fontWeight: 700, fontSize: '0.85rem', textTransform: 'capitalize', transition: 'all 0.2s'
             }}>{s === 'all' ? 'All' : statusColors[s]?.label}</button>
           ))}
@@ -214,10 +215,10 @@ export default function AdminDeals() {
 
       {/* ── Admin Employee Breakdown ── */}
       {isAdmin && employeeStats.length > 0 && (
-        <div style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '24px', padding: '32px', marginBottom: '32px' }}>
-          <h3 style={{ color: 'white', margin: '0 0 24px', fontWeight: 800, fontSize: '1.1rem' }}>Commission Distribution</h3>
+        <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '24px', padding: '32px', marginBottom: '32px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
+          <h3 style={{ color: '#0f172a', margin: '0 0 24px', fontWeight: 800, fontSize: '1.1rem' }}>Commission Distribution</h3>
           
-          <div style={{ display: 'grid', gridTemplateColumns: '150px 1fr 120px 130px 130px 130px', gap: '16px', marginBottom: '12px', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '8px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '150px 1fr 120px 130px 130px 130px', gap: '16px', marginBottom: '12px', borderBottom: '1px solid #e2e8f0', paddingBottom: '8px' }}>
             <span style={{ color: '#64748B', fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase' }}>Agent</span>
             <span style={{ color: '#64748B', fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase' }} />
             <span style={{ color: '#64748B', fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase', textAlign: 'right' }}>Total Value</span>
@@ -233,18 +234,18 @@ export default function AdminDeals() {
               return (
                 <div key={sp.id} style={{ display: 'grid', gridTemplateColumns: '150px 1fr 120px 130px 130px 130px', alignItems: 'center', gap: '16px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: isNap ? 'linear-gradient(135deg, #C99F4A, #ffffff)' : 'linear-gradient(135deg, #C99F4A, #1B365D)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, color: 'white', flexShrink: 0 }}>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: isNap ? 'linear-gradient(135deg, #C99F4A, #1B365D)' : '#1B365D', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, color: 'white', flexShrink: 0 }}>
                       {(sp.name || sp.email || '?').charAt(0).toUpperCase()}
                     </div>
-                    <span style={{ color: 'white', fontSize: '0.85rem', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    <span style={{ color: '#0f172a', fontSize: '0.85rem', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                       {sp.name || sp.email?.split('@')[0]}
                       <span style={{ fontSize: '0.65rem', color: isNap ? '#C99F4A' : '#64748B', marginLeft: '6px', textTransform: 'uppercase', fontWeight: 800 }}>
                         {sp.role}
                       </span>
                     </span>
                   </div>
-                  <div style={{ height: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px', overflow: 'hidden' }}>
-                    <div style={{ width: `${(sp.revenue / maxRev) * 100}%`, height: '100%', background: isNap ? 'linear-gradient(90deg, #C99F4A, #ffffff)' : 'linear-gradient(90deg, #C99F4A, #1B365D)', borderRadius: '10px', transition: 'width 0.6s ease' }} />
+                  <div style={{ height: '8px', background: 'rgba(0,0,0,0.05)', borderRadius: '10px', overflow: 'hidden' }}>
+                    <div style={{ width: `${(sp.revenue / maxRev) * 100}%`, height: '100%', background: isNap ? 'linear-gradient(90deg, #C99F4A, #1B365D)' : '#1B365D', borderRadius: '10px', transition: 'width 0.6s ease' }} />
                   </div>
                   <span style={{ color: '#10b981', fontWeight: 700, fontSize: '0.9rem', textAlign: 'right' }}>{fmt(sp.revenue)}</span>
                   <span style={{ color: '#3b82f6', fontWeight: 600, fontSize: '0.85rem', textAlign: 'right' }}>+{fmt(sp.revenue * 0.60)}</span>
@@ -259,7 +260,7 @@ export default function AdminDeals() {
 
       {/* ── Deals Table + Detail Panel ── */}
       <div className={`deals-grid ${selectedDeal ? 'has-selection' : ''}`}>
-        <div className="deal-table-container" style={{ background: '#0a0a0a', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '24px', overflowX: 'auto', boxShadow: '0 20px 50px rgba(0,0,0,0.3)' }}>
+        <div className="deal-table-container" style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '24px', overflowX: 'auto', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
           {loading ? (
             <div style={{ padding: '32px', display: 'grid', gap: '12px' }}>
               {[1,2,3,4].map(i => <div key={i} className="deal-skeleton" style={{ height: '56px' }} />)}
@@ -275,7 +276,7 @@ export default function AdminDeals() {
           ) : (
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <thead>
-                <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   {['Lead', 'Agent', 'Submitted', 'Status', isAdmin ? 'Deal Value' : null, 'Commission'].filter(Boolean).map(h => (
                     <th key={h} style={{ padding: '16px 20px', textAlign: 'left', color: '#64748B', fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em' }}>{h}</th>
                   ))}
@@ -291,17 +292,17 @@ export default function AdminDeals() {
                       key={deal.id}
                       onClick={() => { setSelectedDeal(deal); setEditValue(deal.deal_value ?? ''); setEditNotes(deal.admin_notes ?? '') }}
                       style={{
-                        borderBottom: '1px solid rgba(255,255,255,0.04)',
+                        borderBottom: '1px solid #f1f5f9',
                         cursor: 'pointer',
-                        background: isSelected ? 'rgba(209, 187, 251,0.06)' : 'transparent',
+                        background: isSelected ? 'rgba(201, 159, 74, 0.08)' : 'transparent',
                         transition: 'background 0.15s'
                       }}
                     >
                       <td style={{ padding: '16px 20px' }}>
-                        <p style={{ margin: 0, color: 'white', fontWeight: 700, fontSize: '0.9rem' }}>{deal.lead_name || 'Unknown'}</p>
+                        <p style={{ margin: 0, color: '#0f172a', fontWeight: 700, fontSize: '0.9rem' }}>{deal.lead_name || 'Unknown'}</p>
                         <p style={{ margin: 0, color: '#64748B', fontSize: '0.8rem' }}>{deal.lead_email || deal.lead_company || ''}</p>
                       </td>
-                      <td style={{ padding: '16px 20px', color: '#94A3B8', fontSize: '0.85rem', fontWeight: 600 }}>
+                      <td style={{ padding: '16px 20px', color: '#0f172a', fontSize: '0.85rem', fontWeight: 600 }}>
                         {deal.salesperson_name || '—'}
                       </td>
                       <td style={{ padding: '16px 20px', color: '#64748B', fontSize: '0.8rem', whiteSpace: 'nowrap' }}>
@@ -324,9 +325,9 @@ export default function AdminDeals() {
                               cursor: 'pointer'
                             }}
                           >
-                            <option value="pipeline" style={{ background: '#0a0a0a', color: '#fcd34d' }}>Pipeline</option>
-                            <option value="won" style={{ background: '#0a0a0a', color: '#6ee7b7' }}>Won</option>
-                            <option value="lost" style={{ background: '#0a0a0a', color: '#fca5a5' }}>Lost</option>
+                            <option value="pipeline" style={{ background: '#ffffff', color: '#b45309' }}>Pipeline</option>
+                            <option value="won" style={{ background: '#ffffff', color: '#10b981' }}>Won</option>
+                            <option value="lost" style={{ background: '#ffffff', color: '#ef4444' }}>Lost</option>
                           </select>
                         ) : (
                           <span style={{ padding: '4px 12px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 700, background: sc.bg, color: sc.text, border: sc.border }}>
@@ -335,8 +336,8 @@ export default function AdminDeals() {
                         )}
                       </td>
                       {isAdmin && (
-                        <td style={{ padding: '16px 20px', color: deal.deal_value ? '#10b981' : '#475569', fontWeight: 700, fontSize: '0.9rem' }}>
-                          {deal.deal_value ? fmt(deal.deal_value) : <span style={{ color: '#d1bbfb', fontSize: '0.75rem', fontWeight: 700 }}>SET PRICE ↗</span>}
+                        <td style={{ padding: '16px 20px', color: deal.deal_value ? '#10b981' : '#64748b', fontWeight: 700, fontSize: '0.9rem' }}>
+                          {deal.deal_value ? fmt(deal.deal_value) : <span style={{ color: '#C99F4A', fontSize: '0.75rem', fontWeight: 700 }}>SET PRICE ↗</span>}
                         </td>
                       )}
                       <td style={{ padding: '16px 20px', color: deal.commission ? '#f59e0b' : '#334155', fontWeight: 700, fontSize: '0.9rem' }}>
@@ -359,13 +360,13 @@ export default function AdminDeals() {
         {selectedDeal && (
           <div className="deal-detail-panel">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-              <h3 style={{ margin: 0, color: 'white', fontWeight: 800, fontSize: '1.1rem' }}>Deal Details</h3>
-              <button onClick={() => setSelectedDeal(null)} style={{ background: 'rgba(255,255,255,0.05)', border: 'none', color: '#94A3B8', cursor: 'pointer', borderRadius: '8px', padding: '6px 10px', fontSize: '0.75rem' }}>✕ Close</button>
+              <h3 style={{ margin: 0, color: '#0f172a', fontWeight: 800, fontSize: '1.1rem' }}>Deal Details</h3>
+              <button onClick={() => setSelectedDeal(null)} style={{ background: 'rgba(0,0,0,0.05)', border: 'none', color: '#64748B', cursor: 'pointer', borderRadius: '8px', padding: '6px 10px', fontSize: '0.75rem' }}>✕ Close</button>
             </div>
 
             {/* Lead Info */}
-            <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: '16px', padding: '20px', marginBottom: '20px' }}>
-              <p style={{ margin: '0 0 4px', color: 'white', fontWeight: 800, fontSize: '1rem' }}>{selectedDeal.lead_name}</p>
+            <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '20px', marginBottom: '20px' }}>
+              <p style={{ margin: '0 0 4px', color: '#0f172a', fontWeight: 800, fontSize: '1rem' }}>{selectedDeal.lead_name}</p>
               {selectedDeal.lead_email && <p style={{ margin: '0 0 4px', color: '#64748B', fontSize: '0.82rem' }}>{selectedDeal.lead_email}</p>}
               {selectedDeal.lead_company && <p style={{ margin: 0, color: '#64748B', fontSize: '0.82rem' }}>{selectedDeal.lead_company}</p>}
             </div>
@@ -374,7 +375,7 @@ export default function AdminDeals() {
             {isAdmin && (
               <div style={{ marginBottom: '20px' }}>
                 <label style={{ display: 'block', color: '#64748B', fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '8px' }}>Agent</label>
-                <p style={{ margin: 0, color: 'white', fontWeight: 600, fontSize: '0.9rem' }}>{selectedDeal.salesperson_name || '—'}</p>
+                <p style={{ margin: 0, color: '#0f172a', fontWeight: 600, fontSize: '0.9rem' }}>{selectedDeal.salesperson_name || '—'}</p>
               </div>
             )}
 
@@ -392,7 +393,7 @@ export default function AdminDeals() {
                         style={{
                           flex: 1, padding: '8px 4px', borderRadius: '10px', border: sc.border, cursor: 'pointer',
                           background: selectedDeal.status === s ? sc.bg : 'transparent',
-                          color: selectedDeal.status === s ? sc.text : '#475569',
+                          color: selectedDeal.status === s ? sc.text : '#64748B',
                           fontWeight: 700, fontSize: '0.75rem', textTransform: 'capitalize', transition: 'all 0.2s'
                         }}
                       >{sc.label}</button>
@@ -410,7 +411,7 @@ export default function AdminDeals() {
                    placeholder="e.g. 5000"
                    value={editValue}
                    onChange={e => setEditValue(e.target.value)}
-                   style={{ width: '100%', padding: '12px', background: '#111', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px', color: 'white', fontSize: '1rem', fontWeight: 700, outline: 'none', boxSizing: 'border-box' }}
+                   style={{ width: '100%', padding: '12px', background: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '10px', color: '#0f172a', fontSize: '1rem', fontWeight: 700, outline: 'none', boxSizing: 'border-box' }}
                  />
                  {editValue && !isNaN(parseFloat(editValue)) && (() => {
                    const spId = selectedDeal.salesperson_id
@@ -418,7 +419,7 @@ export default function AdminDeals() {
                    const isNapoleon = spProf?.role === 'Napoleon' || (spId === user?.id && profile?.role === 'Napoleon')
                    const rate = isNapoleon ? 0.30 : COMMISSION_RATE
                    return (
-                     <p style={{ margin: '8px 0 0', color: '#f59e0b', fontSize: '0.82rem', fontWeight: 600 }}>
+                     <p style={{ margin: '8px 0 0', color: '#b45309', fontSize: '0.82rem', fontWeight: 600 }}>
                        {isNapoleon ? '30%' : '5%'} commission → {fmt(parseFloat(editValue) * rate)}
                      </p>
                    )
@@ -427,7 +428,7 @@ export default function AdminDeals() {
              )}
 
             {/* Commission */}
-            <div style={{ background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.2)', borderRadius: '14px', padding: '16px', marginBottom: '20px' }}>
+            <div style={{ background: 'rgba(201, 159, 74, 0.08)', border: '1px solid rgba(201, 159, 74, 0.25)', borderRadius: '14px', padding: '16px', marginBottom: '20px' }}>
               {(() => {
                 const spId = selectedDeal.salesperson_id
                 const spProf = salespeople.find(sp => sp.id === spId)
@@ -435,10 +436,10 @@ export default function AdminDeals() {
                 const rate = isNapoleon ? 0.30 : COMMISSION_RATE
                 return (
                   <>
-                    <p style={{ margin: '0 0 4px', color: '#f59e0b', fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                    <p style={{ margin: '0 0 4px', color: '#C99F4A', fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                       {isAdmin ? 'Agent Commission' : 'Your Commission'} ({isNapoleon ? '30%' : '5%'})
                     </p>
-                    <p style={{ margin: 0, color: 'white', fontWeight: 900, fontSize: '1.6rem' }}>
+                    <p style={{ margin: 0, color: '#C99F4A', fontWeight: 900, fontSize: '1.6rem' }}>
                       {selectedDeal.deal_value
                         ? fmt(editValue && !isNaN(parseFloat(editValue)) ? parseFloat(editValue) * rate : selectedDeal.commission)
                         : '—'
@@ -458,31 +459,31 @@ export default function AdminDeals() {
                   placeholder="Internal notes about this deal..."
                   value={editNotes}
                   onChange={e => setEditNotes(e.target.value)}
-                  style={{ width: '100%', padding: '12px', background: '#111', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px', color: 'white', fontSize: '0.85rem', outline: 'none', resize: 'vertical', boxSizing: 'border-box', fontFamily: 'inherit' }}
+                  style={{ width: '100%', padding: '12px', background: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '10px', color: '#0f172a', fontSize: '0.85rem', outline: 'none', resize: 'vertical', boxSizing: 'border-box', fontFamily: 'inherit' }}
                 />
               </div>
             )}
 
             {isAdmin && (
-              <button
-                onClick={saveDealValue}
-                disabled={saving}
-                style={{
-                  width: '100%', padding: '14px', background: saving ? 'rgba(209, 187, 251,0.4)' : '#d1bbfb',
-                  border: 'none', color: 'white', borderRadius: '12px', fontWeight: 800, fontSize: '0.95rem',
-                  cursor: saving ? 'not-allowed' : 'pointer', transition: 'all 0.2s',
-                  boxShadow: '0 8px 20px rgba(209, 187, 251,0.25)'
-                }}
-              >
-                {saving ? 'Saving...' : 'Save Deal Value'}
-              </button>
+               <button
+                 onClick={saveDealValue}
+                 disabled={saving}
+                 style={{
+                   width: '100%', padding: '14px', background: saving ? 'rgba(27, 54, 93, 0.4)' : '#1B365D',
+                   border: 'none', color: 'white', borderRadius: '12px', fontWeight: 800, fontSize: '0.95rem',
+                   cursor: saving ? 'not-allowed' : 'pointer', transition: 'all 0.2s',
+                   boxShadow: '0 8px 20px rgba(27, 54, 93, 0.2)'
+                 }}
+               >
+                 {saving ? 'Saving...' : 'Save Deal Value'}
+               </button>
             )}
 
             {/* Non-admin notes view */}
             {!isAdmin && selectedDeal.admin_notes && (
-              <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: '12px', padding: '14px' }}>
+              <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '14px' }}>
                 <p style={{ margin: '0 0 6px', color: '#64748B', fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase' }}>Notes from Admin</p>
-                <p style={{ margin: 0, color: '#94A3B8', fontSize: '0.85rem', lineHeight: 1.5 }}>{selectedDeal.admin_notes}</p>
+                <p style={{ margin: 0, color: '#334155', fontSize: '0.85rem', lineHeight: 1.5 }}>{selectedDeal.admin_notes}</p>
               </div>
             )}
           </div>
@@ -494,13 +495,13 @@ export default function AdminDeals() {
 
 function StatCard({ label, value, color, icon }) {
   return (
-    <div style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '20px', padding: '24px', display: 'flex', alignItems: 'center', gap: '20px' }}>
+    <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '20px', padding: '24px', display: 'flex', alignItems: 'center', gap: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
       <div style={{ width: '52px', height: '52px', borderRadius: '14px', background: `${color}18`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', flexShrink: 0 }}>
         {icon}
       </div>
       <div>
         <p style={{ margin: '0 0 4px', color: '#64748B', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{label}</p>
-        <p style={{ margin: 0, color: 'white', fontSize: '1.5rem', fontWeight: 900 }}>{value}</p>
+        <p style={{ margin: 0, color: '#0f172a', fontSize: '1.5rem', fontWeight: 900 }}>{value}</p>
       </div>
     </div>
   )

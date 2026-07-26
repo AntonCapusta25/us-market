@@ -268,19 +268,20 @@ export default function AdminEmailSettings() {
         @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes toastIn { from { opacity: 0; transform: translateX(100%); } to { opacity: 1; transform: translateX(0); } }
         .bento-card {
-          background: #0a0a0a;
-          border: 1px solid rgba(255,255,255,0.06);
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
           border-radius: 16px;
           padding: 20px;
           cursor: pointer;
           transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
           position: relative;
           overflow: hidden;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.04);
         }
         .bento-card:hover {
-          border-color: rgba(209, 187, 251,0.4);
+          border-color: #C99F4A;
           transform: translateY(-2px);
-          box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+          box-shadow: 0 12px 30px rgba(0,0,0,0.08);
         }
         .toggle-track { transition: background 0.2s; cursor: pointer; }
         .html-preview-content p {
@@ -304,18 +305,18 @@ export default function AdminEmailSettings() {
           font-size: 0.85rem;
           transition: all 0.2s;
         }
-        .chip-btn:hover { background: rgba(209, 187, 251,0.15) !important; transform: translateY(-1px); }
+        .chip-btn:hover { background: rgba(201, 159, 74, 0.15) !important; transform: translateY(-1px); }
       `}</style>
 
       {/* Toast */}
       {toast && (
         <div style={{
           position: 'fixed', bottom: '32px', right: '32px', zIndex: 99999,
-          background: toast.type === 'error' ? '#1a0404' : '#031a0e',
-          border: `1px solid ${toast.type === 'error' ? 'rgba(239,68,68,0.4)' : 'rgba(16,185,129,0.4)'}`,
-          color: toast.type === 'error' ? '#f87171' : '#6ee7b7',
+          background: toast.type === 'error' ? '#fff5f5' : '#f0fdf4',
+          border: `1px solid ${toast.type === 'error' ? 'rgba(239,68,68,0.3)' : 'rgba(16,185,129,0.3)'}`,
+          color: toast.type === 'error' ? '#dc2626' : '#059669',
           padding: '14px 24px', borderRadius: '14px', fontWeight: 600, fontSize: '0.9rem',
-          boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
+          boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
           animation: 'toastIn 0.3s ease-out'
         }}>
           {toast.msg}
@@ -349,14 +350,14 @@ export default function AdminEmailSettings() {
           >
             ➕ Create Custom Template
           </button>
-          <div style={{ padding: '10px 20px', background: enabledCount > 0 ? 'rgba(16,185,129,0.1)' : 'rgba(255,255,255,0.05)', border: `1px solid ${enabledCount > 0 ? 'rgba(16,185,129,0.3)' : 'rgba(255,255,255,0.1)'}`, borderRadius: '12px', fontSize: '0.85rem', fontWeight: 700, color: enabledCount > 0 ? '#6ee7b7' : '#64748B' }}>
+          <div style={{ padding: '10px 20px', background: enabledCount > 0 ? 'rgba(16,185,129,0.08)' : '#f1f5f9', border: `1px solid ${enabledCount > 0 ? 'rgba(16,185,129,0.25)' : '#cbd5e1'}`, borderRadius: '12px', fontSize: '0.85rem', fontWeight: 700, color: enabledCount > 0 ? '#059669' : '#64748B' }}>
             {enabledCount} active
           </div>
         </div>
       </div>
 
       {/* ── Section 1: System / Status Templates ── */}
-      <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.3rem', fontWeight: 800, color: 'white', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span>System Status Automations</span>
         <span style={{ fontSize: '0.75rem', color: '#64748B', fontWeight: 500 }}>Triggered on lead status changes</span>
       </h2>
@@ -373,7 +374,7 @@ export default function AdminEmailSettings() {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <span style={{ fontSize: '1.25rem' }}>{s.icon}</span>
-                  <span style={{ fontWeight: 800, color: 'white', fontSize: '0.95rem' }}>{s.key}</span>
+                  <span style={{ fontWeight: 800, color: '#0f172a', fontSize: '0.95rem' }}>{s.key}</span>
                 </div>
                 {/* Enabled Toggle */}
                 <div
@@ -384,7 +385,7 @@ export default function AdminEmailSettings() {
                   className="toggle-track"
                   style={{
                     width: '38px', height: '20px', borderRadius: '10px',
-                    background: t.enabled ? '#d1bbfb' : 'rgba(255,255,255,0.1)',
+                    background: t.enabled ? '#1B365D' : '#cbd5e1',
                     position: 'relative'
                   }}
                 >
@@ -405,7 +406,7 @@ export default function AdminEmailSettings() {
                 }}>
                   System
                 </span>
-                <span style={{ fontSize: '0.75rem', color: '#d1bbfb', fontWeight: 700 }}>Edit →</span>
+                <span style={{ fontSize: '0.75rem', color: '#C99F4A', fontWeight: 700 }}>Edit →</span>
               </div>
             </div>
           )
@@ -413,19 +414,19 @@ export default function AdminEmailSettings() {
       </div>
 
       {/* ── Section 2: Custom Templates ── */}
-      <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.3rem', fontWeight: 800, color: 'white', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.3rem', fontWeight: 800, color: '#0f172a', marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span>Custom Templates</span>
         <span style={{ fontSize: '0.75rem', color: '#64748B', fontWeight: 500 }}>Available to choose in the email composer</span>
       </h2>
 
       {customTemplates.length === 0 ? (
-        <div style={{ border: '2px dashed rgba(255,255,255,0.06)', borderRadius: '20px', padding: '40px', textAlign: 'center', color: '#64748B', marginBottom: '40px' }}>
+        <div style={{ border: '2px dashed #e2e8f0', borderRadius: '20px', padding: '40px', textAlign: 'center', color: '#64748B', marginBottom: '40px' }}>
           <p style={{ margin: '0 0 12px 0', fontSize: '0.85rem' }}>No custom email templates created yet.</p>
           <button
             onClick={handleOpenCreate}
             style={{
-              padding: '6px 16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)',
-              borderRadius: '8px', color: 'white', fontWeight: 700, cursor: 'pointer', fontSize: '0.75rem'
+              padding: '6px 16px', background: '#f8fafc', border: '1px solid #e2e8f0',
+              borderRadius: '8px', color: '#0f172a', fontWeight: 700, cursor: 'pointer', fontSize: '0.75rem'
             }}
           >
             Create Custom Template
@@ -443,7 +444,7 @@ export default function AdminEmailSettings() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <span style={{ fontSize: '1.25rem' }}>📝</span>
-                    <span style={{ fontWeight: 800, color: 'white', fontSize: '0.95rem' }}>{t.status}</span>
+                    <span style={{ fontWeight: 800, color: '#0f172a', fontSize: '0.95rem' }}>{t.status}</span>
                   </div>
                   {/* Toggle */}
                   <div
@@ -454,7 +455,7 @@ export default function AdminEmailSettings() {
                     className="toggle-track"
                     style={{
                       width: '38px', height: '20px', borderRadius: '10px',
-                      background: t.enabled ? '#d1bbfb' : 'rgba(255,255,255,0.1)',
+                      background: t.enabled ? '#1B365D' : '#cbd5e1',
                       position: 'relative'
                     }}
                   >
@@ -471,11 +472,11 @@ export default function AdminEmailSettings() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span style={{
                     fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em',
-                    padding: '2px 8px', borderRadius: '12px', background: 'rgba(209, 187, 251,0.1)', color: '#f472b6'
+                    padding: '2px 8px', borderRadius: '12px', background: 'rgba(201, 159, 74, 0.1)', color: '#C99F4A'
                   }}>
                     Custom
                   </span>
-                  <span style={{ fontSize: '0.75rem', color: '#d1bbfb', fontWeight: 700 }}>Edit →</span>
+                  <span style={{ fontSize: '0.75rem', color: '#C99F4A', fontWeight: 700 }}>Edit →</span>
                 </div>
               </div>
             )
@@ -486,11 +487,11 @@ export default function AdminEmailSettings() {
       {/* ── WIZARD MODAL ── */}
       {wizardOpen && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(5px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, padding: '20px' }}>
-          <div style={{ background: '#0c0c0e', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '24px', width: '100%', maxWidth: '700px', padding: '32px', boxShadow: '0 30px 60px rgba(0,0,0,0.9)', display: 'flex', flexDirection: 'column', maxHeight: '90vh' }}>
+          <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '24px', width: '100%', maxWidth: '700px', padding: '32px', boxShadow: '0 30px 60px rgba(0,0,0,0.12)', display: 'flex', flexDirection: 'column', maxHeight: '90vh' }}>
             
             {/* Modal Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-              <h3 style={{ margin: 0, color: 'white', fontSize: '1.3rem', fontWeight: 800, fontFamily: 'Space Grotesk, sans-serif' }}>
+              <h3 style={{ margin: 0, color: '#0f172a', fontSize: '1.3rem', fontWeight: 800, fontFamily: 'Space Grotesk, sans-serif' }}>
                 {wizardMode === 'create' ? 'Create Custom Template' : `Edit Template: ${wizardOriginalStatus}`}
               </h3>
               <button onClick={() => setWizardOpen(false)} style={{ background: 'transparent', border: 'none', color: '#64748B', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -512,15 +513,15 @@ export default function AdminEmailSettings() {
                     <div
                       className="step-bubble"
                       style={{
-                        background: isActive ? '#d1bbfb' : isPassed ? 'rgba(209, 187, 251,0.15)' : 'rgba(255,255,255,0.03)',
-                        color: isActive ? 'white' : isPassed ? '#f472b6' : '#64748B',
-                        border: `1px solid ${isActive ? '#d1bbfb' : isPassed ? 'rgba(209, 187, 251,0.3)' : 'rgba(255,255,255,0.08)'}`
+                        background: isActive ? '#1B365D' : isPassed ? 'rgba(27, 54, 93, 0.12)' : '#f1f5f9',
+                        color: isActive ? 'white' : isPassed ? '#1B365D' : '#64748B',
+                        border: `1px solid ${isActive ? '#1B365D' : isPassed ? 'rgba(27, 54, 93, 0.3)' : '#e2e8f0'}`
                       }}
                     >
                       {isPassed ? '✓' : step.number}
                     </div>
-                    <span style={{ fontSize: '0.78rem', fontWeight: isActive ? 800 : 500, color: isActive ? 'white' : '#64748B' }}>{step.label}</span>
-                    {step.number < 3 && <div style={{ width: '24px', height: '1px', background: 'rgba(255,255,255,0.08)' }} />}
+                    <span style={{ fontSize: '0.78rem', fontWeight: isActive ? 800 : 500, color: isActive ? '#0f172a' : '#64748B' }}>{step.label}</span>
+                    {step.number < 3 && <div style={{ width: '24px', height: '1px', background: '#e2e8f0' }} />}
                   </div>
                 )
               })}
@@ -547,9 +548,9 @@ export default function AdminEmailSettings() {
                       onChange={e => setWizardStatus(e.target.value)}
                       placeholder="e.g. Booking Followup, LinkedIn Intro"
                       style={{
-                        width: '100%', padding: '14px 16px', background: 'rgba(255,255,255,0.03)',
-                        border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px',
-                        color: 'white', outline: 'none', fontSize: '0.95rem', boxSizing: 'border-box'
+                        width: '100%', padding: '14px 16px', background: '#ffffff',
+                        border: '1px solid #cbd5e1', borderRadius: '12px',
+                        color: '#0f172a', outline: 'none', fontSize: '0.95rem', boxSizing: 'border-box'
                       }}
                     />
                     {SYSTEM_STATUSES_KEYS.includes(wizardOriginalStatus) && (
@@ -567,7 +568,7 @@ export default function AdminEmailSettings() {
                       onChange={e => setWizardEnabled(e.target.checked)}
                       style={{ width: '18px', height: '18px', cursor: 'pointer' }}
                     />
-                    <label htmlFor="wizard-enabled-check" style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', fontWeight: 700 }}>
+                    <label htmlFor="wizard-enabled-check" style={{ color: '#0f172a', fontSize: '0.85rem', cursor: 'pointer', fontWeight: 700 }}>
                       Enable Template for usage
                     </label>
                   </div>
@@ -589,9 +590,9 @@ export default function AdminEmailSettings() {
                         onClick={() => insertModalVariable(v.label)}
                         className="chip-btn"
                         style={{
-                          padding: '5px 12px', background: 'rgba(209, 187, 251,0.06)',
-                          border: '1px solid rgba(209, 187, 251,0.15)', borderRadius: '8px',
-                          color: '#f472b6', fontSize: '0.75rem', fontWeight: 700,
+                          padding: '5px 12px', background: 'rgba(201, 159, 74, 0.06)',
+                          border: '1px solid rgba(201, 159, 74, 0.2)', borderRadius: '8px',
+                          color: '#C99F4A', fontSize: '0.75rem', fontWeight: 700,
                           cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '4px',
                           userSelect: 'none'
                         }}
@@ -613,9 +614,9 @@ export default function AdminEmailSettings() {
                       onFocus={() => setModalActiveField('subject')}
                       placeholder="e.g. Strategy session confirmed for {{name}}! 🗓️"
                       style={{
-                        width: '100%', padding: '14px 16px', background: '#111',
-                        border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px',
-                        color: 'white', outline: 'none', fontSize: '0.95rem', boxSizing: 'border-box'
+                        width: '100%', padding: '14px 16px', background: '#ffffff',
+                        border: '1px solid #cbd5e1', borderRadius: '12px',
+                        color: '#0f172a', outline: 'none', fontSize: '0.95rem', boxSizing: 'border-box'
                       }}
                     />
                   </div>
@@ -630,7 +631,7 @@ export default function AdminEmailSettings() {
                       Write the HTML body code or check the preview. Drag variable chips straight into the editor!
                     </p>
                     {/* Tab Switcher */}
-                    <div style={{ display: 'flex', background: 'rgba(255,255,255,0.05)', borderRadius: '8px', padding: '3px' }}>
+                    <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: '8px', padding: '3px' }}>
                       {['edit', 'preview'].map(tabKey => (
                         <button
                           key={tabKey}
@@ -638,8 +639,8 @@ export default function AdminEmailSettings() {
                           style={{
                             padding: '4px 12px', border: 'none', borderRadius: '6px', cursor: 'pointer',
                             fontSize: '0.72rem', fontWeight: 700, transition: 'all 0.2s',
-                            background: modalPreviewTab === tabKey ? 'rgba(209, 187, 251,0.1)' : 'transparent',
-                            color: modalPreviewTab === tabKey ? '#f472b6' : '#64748B'
+                            background: modalPreviewTab === tabKey ? '#1B365D' : 'transparent',
+                            color: modalPreviewTab === tabKey ? 'white' : '#64748B'
                           }}
                         >
                           {tabKey === 'edit' ? '✏️ Editor' : '👁 Preview'}
@@ -660,9 +661,9 @@ export default function AdminEmailSettings() {
                             onClick={() => insertModalVariable(v.label)}
                             className="chip-btn"
                             style={{
-                              padding: '5px 12px', background: 'rgba(209, 187, 251,0.06)',
-                              border: '1px solid rgba(209, 187, 251,0.15)', borderRadius: '8px',
-                              color: '#f472b6', fontSize: '0.75rem', fontWeight: 700,
+                              padding: '5px 12px', background: 'rgba(201, 159, 74, 0.06)',
+                              border: '1px solid rgba(201, 159, 74, 0.2)', borderRadius: '8px',
+                              color: '#C99F4A', fontSize: '0.75rem', fontWeight: 700,
                               cursor: 'grab', display: 'inline-flex', alignItems: 'center', gap: '4px',
                               userSelect: 'none'
                             }}
@@ -682,10 +683,10 @@ export default function AdminEmailSettings() {
                             }
                           }}
                           style={{
-                            background: 'rgba(255,255,255,0.03)',
-                            border: '1px solid rgba(255,255,255,0.1)',
+                            background: '#f8fafc',
+                            border: '1px solid #cbd5e1',
                             borderRadius: '8px',
-                            color: '#94A3B8',
+                            color: '#0f172a',
                             padding: '4px 10px',
                             fontSize: '0.75rem',
                             fontWeight: 700,
@@ -693,9 +694,9 @@ export default function AdminEmailSettings() {
                             outline: 'none'
                           }}
                         >
-                          <option value="" disabled style={{ background: '#111' }}>+ Select Variable</option>
+                          <option value="" disabled style={{ background: '#ffffff', color: '#64748B' }}>+ Select Variable</option>
                           {VARIABLE_CHIPS.map(v => (
-                            <option key={v.label} value={v.label} style={{ background: '#111', color: 'white' }}>
+                            <option key={v.label} value={v.label} style={{ background: '#ffffff', color: '#0f172a' }}>
                               {v.label} ({v.desc})
                             </option>
                           ))}
@@ -710,8 +711,8 @@ export default function AdminEmailSettings() {
                         placeholder="<p>Hi {{name}},</p>\n<p>Thanks for getting in touch with us at {{company}}.</p>"
                         style={{
                           width: '100%', height: '220px', padding: '16px',
-                          background: '#0d0d0d', border: '1px solid rgba(255,255,255,0.08)',
-                          borderRadius: '12px', color: '#e2e8f0', outline: 'none',
+                          background: '#f8fafc', border: '1px solid #e2e8f0',
+                          borderRadius: '12px', color: '#0f172a', outline: 'none',
                           resize: 'vertical', fontFamily: "'Courier New', monospace",
                           fontSize: '0.85rem', lineHeight: 1.7,
                           boxSizing: 'border-box'
@@ -720,21 +721,21 @@ export default function AdminEmailSettings() {
                     </>
                   ) : (
                     /* Live Preview pane */
-                    <div style={{ minHeight: '220px', background: '#111', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', overflow: 'hidden' }}>
-                      <div style={{ background: 'linear-gradient(135deg, #d1bbfb, #8b5cf6)', padding: '16px 20px', textAlign: 'center' }}>
+                    <div style={{ minHeight: '220px', background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '12px', overflow: 'hidden' }}>
+                      <div style={{ background: 'linear-gradient(135deg, #C99F4A, #1B365D)', padding: '16px 20px', textAlign: 'center' }}>
                         <p style={{ margin: 0, color: 'white', fontWeight: 800, fontSize: '0.95rem' }}>Finder admin</p>
                       </div>
-                      <div style={{ padding: '20px' }}>
-                        <p style={{ margin: '0 0 10px 0', color: '#94A3B8', fontSize: '0.72rem', fontWeight: 600 }}>
-                          Subject: <span style={{ color: 'white' }}>{interpolatePreview(wizardSubject, previewVars)}</span>
+                      <div style={{ padding: '20px', background: '#ffffff' }}>
+                        <p style={{ margin: '0 0 10px 0', color: '#64748B', fontSize: '0.72rem', fontWeight: 600 }}>
+                          Subject: <span style={{ color: '#0f172a' }}>{interpolatePreview(wizardSubject, previewVars)}</span>
                         </p>
                         <div
-                          style={{ color: '#CBD5E1', fontSize: '0.85rem', lineHeight: 1.6 }}
-                          dangerouslySetInnerHTML={{ __html: formatPreviewBody(wizardBody || '<em style="color:#475569">No email body code...</em>', previewVars) }}
+                          style={{ color: '#334155', fontSize: '0.85rem', lineHeight: 1.6 }}
+                          dangerouslySetInnerHTML={{ __html: formatPreviewBody(wizardBody || '<em style="color:#94a3b8">No email body code...</em>', previewVars) }}
                         />
                       </div>
-                      <div style={{ padding: '10px 20px', background: '#0a0a0a', textAlign: 'center' }}>
-                        <p style={{ margin: 0, color: '#475569', fontSize: '0.65rem' }}>© 2026 Finder admin</p>
+                      <div style={{ padding: '10px 20px', background: '#f8fafc', borderTop: '1px solid #e2e8f0', textAlign: 'center' }}>
+                        <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.65rem' }}>© 2026 Finder admin</p>
                       </div>
                     </div>
                   )}
@@ -744,14 +745,14 @@ export default function AdminEmailSettings() {
             </div>
 
             {/* Modal Footer Controls */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '20px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #e2e8f0', paddingTop: '20px' }}>
               <div>
                 {wizardMode === 'edit' && !SYSTEM_STATUSES_KEYS.includes(wizardOriginalStatus) && (
                   <button
                     onClick={() => handleDeleteTemplate(wizardOriginalStatus)}
                     style={{
                       padding: '10px 18px', background: 'rgba(239,68,68,0.05)', border: '1px solid rgba(239,68,68,0.2)',
-                      color: '#f87171', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', fontSize: '0.8rem'
+                      color: '#dc2626', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', fontSize: '0.8rem'
                     }}
                   >
                     🗑️ Delete
@@ -763,8 +764,8 @@ export default function AdminEmailSettings() {
                 <button
                   onClick={() => setWizardOpen(false)}
                   style={{
-                    padding: '10px 20px', background: 'transparent', border: '1px solid rgba(255,255,255,0.08)',
-                    color: '#94A3B8', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', fontSize: '0.85rem'
+                    padding: '10px 20px', background: 'transparent', border: '1px solid #e2e8f0',
+                    color: '#64748B', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', fontSize: '0.85rem'
                   }}
                 >
                   Cancel
@@ -774,8 +775,8 @@ export default function AdminEmailSettings() {
                   <button
                     onClick={() => setWizardStep(prev => prev - 1)}
                     style={{
-                      padding: '10px 20px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
-                      color: 'white', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', fontSize: '0.85rem'
+                      padding: '10px 20px', background: '#f1f5f9', border: '1px solid #e2e8f0',
+                      color: '#0f172a', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', fontSize: '0.85rem'
                     }}
                   >
                     Back
@@ -821,16 +822,16 @@ export default function AdminEmailSettings() {
       {/* Info footer box */}
       <div style={{
         marginTop: '40px', padding: '20px 24px',
-        background: 'rgba(59,130,246,0.05)', border: '1px solid rgba(59,130,246,0.15)',
+        background: 'rgba(27, 54, 93, 0.04)', border: '1px solid rgba(27, 54, 93, 0.15)',
         borderRadius: '16px', display: 'flex', gap: '16px', alignItems: 'flex-start'
       }}>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: '2px' }}>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B365D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: '2px' }}>
           <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
         <div>
-          <p style={{ margin: '0 0 4px', color: '#93c5fd', fontWeight: 700, fontSize: '0.9rem' }}>Template Instructions</p>
+          <p style={{ margin: '0 0 4px', color: '#1B365D', fontWeight: 700, fontSize: '0.9rem' }}>Template Instructions</p>
           <p style={{ margin: 0, color: '#64748B', fontSize: '0.85rem', lineHeight: 1.6 }}>
-            Status Automations trigger automatically on lead status shifts in the CRM. Custom templates are available for manual execution inside the Leads email composer modal. Available variables: <code style={{ color: '#f472b6' }}>{"{{name}}"}</code>, <code style={{ color: '#f472b6' }}>{"{{status}}"}</code>, <code style={{ color: '#f472b6' }}>{"{{company}}"}</code>, <code style={{ color: '#f472b6' }}>{"{{service}}"}</code>. Drag and drop any variable tag directly into the editors to insert them!
+            Status Automations trigger automatically on lead status shifts in the CRM. Custom templates are available for manual execution inside the Leads email composer modal. Available variables: <code style={{ color: '#C99F4A' }}>{"{{name}}"}</code>, <code style={{ color: '#C99F4A' }}>{"{{status}}"}</code>, <code style={{ color: '#C99F4A' }}>{"{{company}}"}</code>, <code style={{ color: '#C99F4A' }}>{"{{service}}"}</code>. Drag and drop any variable tag directly into the editors to insert them!
           </p>
         </div>
       </div>

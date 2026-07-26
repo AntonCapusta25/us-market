@@ -1304,8 +1304,8 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
           grid-template-columns: 1fr 400px;
         }
         .lead-detail-panel {
-          background: #0a0a0a;
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
           border-radius: 24px;
           padding: 32px;
           align-self: start;
@@ -1313,6 +1313,8 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
           top: 40px;
           max-height: calc(100vh - 80px);
           overflow-y: auto;
+          color: #0f172a;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
         @media (max-width: 768px) {
           .leadbank-grid.has-selection { grid-template-columns: 1fr !important; }
@@ -1335,8 +1337,8 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
       )}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: isAdmin && salespeople.length > 0 ? '16px' : '40px' }}>
         <div>
-          <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '2rem', fontWeight: 800, marginBottom: '8px' }}>{title}</h1>
-          <p style={{ color: '#94A3B8' }}>{subtitle}</p>
+          <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '2rem', fontWeight: 800, marginBottom: '8px', color: '#0f172a' }}>{title}</h1>
+          <p style={{ color: '#64748B' }}>{subtitle}</p>
         </div>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
           <div style={{ position: 'relative' }}>
@@ -1472,20 +1474,20 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
       </div>
 
       <div className={`leadbank-grid ${selectedLead ? 'has-selection' : ''}`}>
-        <div className="lead-table-container" style={{ background: '#0a0a0a', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '24px', overflowX: 'auto', boxShadow: '0 20px 50px rgba(0,0,0,0.3)' }}>
+        <div className="lead-table-container" style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '24px', overflowX: 'auto', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '1100px' }}>
             <thead>
-              <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)', background: 'rgba(255,255,255,0.02)' }}>
+              <tr style={{ borderBottom: '1px solid #e2e8f0', background: '#f8fafc' }}>
                 <th style={{ padding: '24px 20px', width: '40px' }}>
                   <input type="checkbox" onChange={e => setSelectedIds(e.target.checked ? leads.map(l => l.id) : [])} checked={selectedIds.length === leads.length && leads.length > 0} />
                 </th>
-                <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Company</th>
-                <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Rep Name</th>
-                <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Position</th>
-                <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Website</th>
-                <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', minWidth: '160px', width: '160px' }}>Phone</th>
-                <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Employees</th>
-                <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Source</th>
+                <th style={{ padding: '24px 20px', color: '#64748B', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Company</th>
+                <th style={{ padding: '24px 20px', color: '#64748B', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Rep Name</th>
+                <th style={{ padding: '24px 20px', color: '#64748B', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Position</th>
+                <th style={{ padding: '24px 20px', color: '#64748B', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Website</th>
+                <th style={{ padding: '24px 20px', color: '#64748B', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', minWidth: '160px', width: '160px' }}>Phone</th>
+                <th style={{ padding: '24px 20px', color: '#64748B', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Employees</th>
+                <th style={{ padding: '24px 20px', color: '#64748B', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Source</th>
                 <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     Industry
@@ -1544,8 +1546,8 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                     </select>
                   </div>
                 </th>
-                {isAdmin && <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Assignee</th>}
-                <th style={{ padding: '24px 20px', color: '#94A3B8', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', textAlign: 'center', position: 'sticky', right: 0, background: '#0a0a0a', zIndex: 10, borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+                {isAdmin && <th style={{ padding: '24px 20px', color: '#64748B', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Assignee</th>}
+                <th style={{ padding: '24px 20px', color: '#64748B', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', textAlign: 'center', position: 'sticky', right: 0, background: '#f8fafc', zIndex: 10, borderLeft: '1px solid #e2e8f0' }}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
                     Activity
                     <select
@@ -1568,7 +1570,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                 <tr><td colSpan={isAdmin ? '14' : '13'} style={{ padding: '60px', textAlign: 'center', color: '#64748B' }}>No outbound leads match table filters.</td></tr>
               ) : leads.map(lead => {
                 return (
-                  <tr key={lead.id} style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)', background: selectedLead?.id === lead.id ? 'rgba(233, 30, 99, 0.04)' : 'transparent', transition: 'all 0.2s' }}>
+                  <tr key={lead.id} style={{ borderBottom: '1px solid #f1f5f9', background: selectedLead?.id === lead.id ? 'rgba(201, 159, 74, 0.08)' : 'transparent', transition: 'all 0.2s' }}>
                     <td style={{ padding: '20px' }}>
                       <input type="checkbox" checked={selectedIds.includes(lead.id)} onChange={() => toggleSelect(lead.id)} />
                     </td>
@@ -1576,15 +1578,15 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                       <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                         <div style={{ width: '40px', height: '40px', minWidth: '40px', flexShrink: 0, borderRadius: '12px', background: 'linear-gradient(135deg, #3b82f6, #10b981)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 800, color: 'white', boxShadow: '0 4px 12px rgba(59, 130, 246, 0.2)' }}>{(lead.company || lead.name || '?').charAt(0).toUpperCase()}</div>
                         <div>
-                          <p style={{ margin: 0, fontWeight: 700, color: 'white', fontSize: '0.95rem' }}>{lead.company || 'Unknown Company'}</p>
+                          <p style={{ margin: 0, fontWeight: 700, color: '#0f172a', fontSize: '0.95rem' }}>{lead.company || 'Unknown Company'}</p>
                         </div>
                       </div>
                     </td>
                     <td style={{ padding: '20px' }}>
-                       <span style={{ color: '#CBD5E1', fontSize: '0.85rem', fontWeight: 600 }}>{lead.representative_name || lead.name || 'Unknown'}</span>
+                       <span style={{ color: '#0f172a', fontSize: '0.85rem', fontWeight: 600 }}>{lead.representative_name || lead.name || 'Unknown'}</span>
                     </td>
                     <td style={{ padding: '20px' }}>
-                       <span style={{ color: '#CBD5E1', fontSize: '0.85rem' }}>{lead.position || 'N/A'}</span>
+                       <span style={{ color: '#334155', fontSize: '0.85rem' }}>{lead.position || 'N/A'}</span>
                     </td>
                     <td style={{ padding: '20px' }}>
                       {lead.website ? (() => {
@@ -1596,15 +1598,15 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                             Visit
                           </a>
                         )
-                      })() : <span style={{ color: '#475569', fontSize: '0.85rem' }}>N/A</span>}
+                      })() : <span style={{ color: '#64748B', fontSize: '0.85rem' }}>N/A</span>}
                     </td>
                     <td style={{ padding: '20px', minWidth: '160px', width: '160px', whiteSpace: 'nowrap' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#CBD5E1', fontSize: '0.85rem', fontWeight: 600 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#0f172a', fontSize: '0.85rem', fontWeight: 600 }}>
                         <span>{lead.phone || 'N/A'}</span>
                       </div>
                     </td>
                     <td style={{ padding: '20px' }}>
-                      <span style={{ color: '#CBD5E1', fontSize: '0.85rem' }}>{lead.employees || 'N/A'}</span>
+                       <span style={{ color: '#334155', fontSize: '0.85rem' }}>{lead.employees || 'N/A'}</span>
                     </td>
                     <td style={{ padding: '20px' }}>
                       <span style={{ color: '#9c27b0', fontSize: '0.85rem', fontWeight: 700, background: 'rgba(156, 39, 176, 0.1)', padding: '4px 8px', borderRadius: '4px' }}>{lead.scrape_source || 'Unknown'}</span>
@@ -1620,8 +1622,8 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                         onBlur={async (e) => {
                           await supabase.from('outreach_leads').update({ industry: e.target.value }).eq('id', lead.id)
                         }}
-                        style={{ background: 'transparent', border: '1px solid transparent', color: '#CBD5E1', fontSize: '0.85rem', padding: '4px 8px', borderRadius: '4px', width: '100px' }}
-                        onMouseEnter={e => e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)'}
+                        style={{ background: 'transparent', border: '1px solid transparent', color: '#0f172a', fontSize: '0.85rem', padding: '4px 8px', borderRadius: '4px', width: '100px' }}
+                        onMouseEnter={e => e.currentTarget.style.border = '1px solid rgba(0,0,0,0.1)'}
                         onMouseLeave={e => e.currentTarget.style.border = '1px solid transparent'}
                       />
                     </td>
@@ -1637,8 +1639,8 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                           const tagArray = e.target.value.split(',').map(t => t.trim()).filter(Boolean)
                           await supabase.from('outreach_leads').update({ tags: tagArray }).eq('id', lead.id)
                         }}
-                        style={{ background: 'transparent', border: '1px solid transparent', color: '#CBD5E1', fontSize: '0.85rem', padding: '4px 8px', borderRadius: '4px', width: '100px' }}
-                        onMouseEnter={e => e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)'}
+                        style={{ background: 'transparent', border: '1px solid transparent', color: '#0f172a', fontSize: '0.85rem', padding: '4px 8px', borderRadius: '4px', width: '100px' }}
+                        onMouseEnter={e => e.currentTarget.style.border = '1px solid rgba(0,0,0,0.1)'}
                         onMouseLeave={e => e.currentTarget.style.border = '1px solid transparent'}
                       />
                     </td>
@@ -2152,31 +2154,31 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
       )}
 
       {showImportModal && (
-        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.8)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, backdropFilter: 'blur(4px)' }}>
-          <div style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.1)', padding: '32px', borderRadius: '24px', width: '400px', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
-            <h2 style={{ margin: '0 0 24px', color: 'white', fontSize: '1.4rem' }}>Import CSV</h2>
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, backdropFilter: 'blur(4px)' }}>
+          <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', padding: '32px', borderRadius: '24px', width: '400px', boxShadow: '0 20px 50px rgba(0,0,0,0.1)' }}>
+            <h2 style={{ margin: '0 0 24px', color: '#0f172a', fontSize: '1.4rem' }}>Import CSV</h2>
 
-            <input type="text" placeholder="Apply Industry to all..." value={importIndustry} onChange={e => setImportIndustry(e.target.value)} style={{ width: '100%', padding: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: 'white', marginBottom: '16px', boxSizing: 'border-box' }} />
-            <input type="text" placeholder="Apply Tags (comma separated)..." value={importTags} onChange={e => setImportTags(e.target.value)} style={{ width: '100%', padding: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: 'white', marginBottom: '16px', boxSizing: 'border-box' }} />
+            <input type="text" placeholder="Apply Industry to all..." value={importIndustry} onChange={e => setImportIndustry(e.target.value)} style={{ width: '100%', padding: '12px', background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '12px', color: '#0f172a', marginBottom: '16px', boxSizing: 'border-box' }} />
+            <input type="text" placeholder="Apply Tags (comma separated)..." value={importTags} onChange={e => setImportTags(e.target.value)} style={{ width: '100%', padding: '12px', background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '12px', color: '#0f172a', marginBottom: '16px', boxSizing: 'border-box' }} />
 
             <select
               value={importAssignee}
               onChange={e => setImportAssignee(e.target.value)}
-              style={{ width: '100%', padding: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: 'white', marginBottom: '24px', outline: 'none', cursor: 'pointer', boxSizing: 'border-box' }}
+              style={{ width: '100%', padding: '12px', background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '12px', color: '#0f172a', marginBottom: '24px', outline: 'none', cursor: 'pointer', boxSizing: 'border-box' }}
             >
-              <option value="" style={{ background: '#0a0a0a', color: '#64748B' }}>-- Leave Unassigned --</option>
+              <option value="" style={{ background: '#ffffff', color: '#64748B' }}>-- Leave Unassigned --</option>
               {salespeople.map(sp => (
-                <option key={sp.id} value={sp.id} style={{ background: '#0a0a0a', color: 'white' }}>
+                <option key={sp.id} value={sp.id} style={{ background: '#ffffff', color: '#0f172a' }}>
                   {sp.name || sp.email.split('@')[0]} ({sp.role})
                 </option>
               ))}
             </select>
 
             <div
-              onDragOver={e => { e.preventDefault(); e.currentTarget.style.borderColor = '#e91e63' }}
-              onDragLeave={e => { e.preventDefault(); e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)' }}
-              onDrop={e => { e.preventDefault(); e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; handleFileUpload(e.dataTransfer.files[0]) }}
-              style={{ border: '2px dashed rgba(255,255,255,0.2)', padding: '40px', borderRadius: '16px', textAlign: 'center', color: '#94A3B8', cursor: 'pointer', marginBottom: '24px', transition: 'all 0.2s' }}
+              onDragOver={e => { e.preventDefault(); e.currentTarget.style.borderColor = '#C99F4A' }}
+              onDragLeave={e => { e.preventDefault(); e.currentTarget.style.borderColor = 'rgba(0,0,0,0.2)' }}
+              onDrop={e => { e.preventDefault(); e.currentTarget.style.borderColor = 'rgba(0,0,0,0.2)'; handleFileUpload(e.dataTransfer.files[0]) }}
+              style={{ border: '2px dashed rgba(0,0,0,0.2)', padding: '40px', borderRadius: '16px', textAlign: 'center', color: '#64748B', cursor: 'pointer', marginBottom: '24px', transition: 'all 0.2s' }}
               onClick={() => document.getElementById('csvUploadInput').click()}
             >
               {isImporting ? 'Importing...' : 'Drag & Drop CSV or Click here'}
@@ -2184,16 +2186,16 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
-              <button onClick={() => setShowImportModal(false)} style={{ padding: '10px 20px', background: 'transparent', color: 'white', border: 'none', cursor: 'pointer', fontWeight: 600 }}>Cancel</button>
+              <button onClick={() => setShowImportModal(false)} style={{ padding: '10px 20px', background: 'transparent', color: '#64748B', border: 'none', cursor: 'pointer', fontWeight: 600 }}>Cancel</button>
             </div>
           </div>
         </div>
       )}
       {callModalLead && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px' }}>
-          <div style={{ background: '#111', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '24px', width: '100%', maxWidth: '400px', padding: '24px', boxShadow: '0 30px 60px rgba(0,0,0,0.8)' }}>
+          <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '24px', width: '100%', maxWidth: '400px', padding: '24px', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-              <h3 style={{ margin: 0, color: 'white', fontSize: '1.1rem', fontWeight: 800 }}>Log Call Details</h3>
+              <h3 style={{ margin: 0, color: '#0f172a', fontSize: '1.1rem', fontWeight: 800 }}>Log Call Details</h3>
               <button onClick={() => setCallModalLead(null)} style={{ background: 'transparent', border: 'none', color: '#64748B', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
@@ -2203,7 +2205,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
               id="modal-call-input"
               autoFocus
               placeholder="How did the call go?"
-              style={{ width: '100%', height: '120px', padding: '16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', color: 'white', outline: 'none', resize: 'none', fontSize: '0.95rem', lineHeight: '1.5', marginBottom: '20px' }}
+              style={{ width: '100%', height: '120px', padding: '16px', background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '16px', color: '#0f172a', outline: 'none', resize: 'none', fontSize: '0.95rem', lineHeight: '1.5', marginBottom: '20px' }}
             />
 
             <div style={{ display: 'flex', gap: '12px' }}>
@@ -2213,7 +2215,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                   logCall(callModalLead, content)
                   setCallModalLead(null)
                 }}
-                style={{ flex: 1, padding: '12px', background: '#e91e63', border: 'none', color: 'white', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', fontSize: '0.9rem' }}
+                style={{ flex: 1, padding: '12px', background: '#C99F4A', border: 'none', color: 'white', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', fontSize: '0.9rem' }}
               >
                 Log Call
               </button>
@@ -2283,10 +2285,10 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
         </div>
       )}
       {customEmailLead && (
-        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px' }}>
-          <div style={{ background: '#111', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '24px', width: '100%', maxWidth: '600px', padding: '28px', boxShadow: '0 30px 60px rgba(0,0,0,0.8)' }}>
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px' }}>
+          <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '24px', width: '100%', maxWidth: '600px', padding: '28px', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-              <h3 style={{ margin: 0, color: 'white', fontSize: '1.25rem', fontWeight: 800 }}>Send Email to {customEmailLead.name || customEmailLead.email}</h3>
+              <h3 style={{ margin: 0, color: '#0f172a', fontSize: '1.25rem', fontWeight: 800 }}>Send Email to {customEmailLead.name || customEmailLead.email}</h3>
               <button onClick={() => setCustomEmailLead(null)} style={{ background: 'transparent', border: 'none', color: '#64748B', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
@@ -2300,11 +2302,11 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
               <select
                 value={selectedTemplate}
                 onChange={e => handleTemplateChange(e.target.value)}
-                style={{ width: '100%', padding: '12px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: 'white', outline: 'none', cursor: 'pointer' }}
+                style={{ width: '100%', padding: '12px', background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '12px', color: '#0f172a', outline: 'none', cursor: 'pointer' }}
               >
-                <option value="" style={{ background: '#111' }}>-- Custom / Blank --</option>
+                <option value="" style={{ background: '#ffffff', color: '#0f172a' }}>-- Custom / Blank --</option>
                 {emailTemplates.filter(t => ['New', 'Contacted', 'In Progress', 'Meeting Booked', 'Waiting for Invoice', 'No Response', 'Converted', 'Lost'].includes(t.status)).length > 0 && (
-                  <optgroup label="System / Status Templates" style={{ background: '#111', color: '#94a3b8' }}>
+                  <optgroup label="System / Status Templates" style={{ background: '#ffffff', color: '#64748B' }}>
                     {emailTemplates
                       .filter(t => ['New', 'Contacted', 'In Progress', 'Meeting Booked', 'Waiting for Invoice', 'No Response', 'Converted', 'Lost'].includes(t.status))
                       .map(t => {
@@ -2319,7 +2321,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                           'Lost': 'Lost'
                         }
                         return (
-                          <option key={t.status} value={t.status} style={{ background: '#111', color: 'white' }}>
+                          <option key={t.status} value={t.status} style={{ background: '#ffffff', color: '#0f172a' }}>
                             {labels[t.status] || t.status}
                           </option>
                         )
@@ -2327,11 +2329,11 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                   </optgroup>
                 )}
                 {emailTemplates.filter(t => !['New', 'Contacted', 'In Progress', 'Meeting Booked', 'Waiting for Invoice', 'No Response', 'Converted', 'Lost'].includes(t.status)).length > 0 && (
-                  <optgroup label="Custom Templates" style={{ background: '#111', color: '#94a3b8' }}>
+                  <optgroup label="Custom Templates" style={{ background: '#ffffff', color: '#64748B' }}>
                     {emailTemplates
                       .filter(t => !['New', 'Contacted', 'In Progress', 'Meeting Booked', 'Waiting for Invoice', 'No Response', 'Converted', 'Lost'].includes(t.status))
                       .map(t => (
-                        <option key={t.status} value={t.status} style={{ background: '#111', color: 'white' }}>
+                        <option key={t.status} value={t.status} style={{ background: '#ffffff', color: '#0f172a' }}>
                           {t.status}
                         </option>
                       ))}
@@ -2350,7 +2352,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                 value={customEmailSubject}
                 onChange={e => setCustomEmailSubject(e.target.value)}
                 placeholder="Enter email subject..."
-                style={{ width: '100%', padding: '12px 16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: 'white', outline: 'none', boxSizing: 'border-box' }}
+                style={{ width: '100%', padding: '12px 16px', background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '12px', color: '#0f172a', outline: 'none', boxSizing: 'border-box' }}
               />
             </div>
 
@@ -2363,14 +2365,14 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                 value={customEmailBody}
                 onChange={e => setCustomEmailBody(e.target.value)}
                 placeholder="Type your message here..."
-                style={{ width: '100%', height: '180px', padding: '16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px', color: 'white', outline: 'none', resize: 'none', fontSize: '0.95rem', lineHeight: '1.5', boxSizing: 'border-box' }}
+                style={{ width: '100%', height: '180px', padding: '16px', background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '16px', color: '#0f172a', outline: 'none', resize: 'none', fontSize: '0.95rem', lineHeight: '1.5', boxSizing: 'border-box' }}
               />
             </div>
 
             <div style={{ display: 'flex', gap: '12px' }}>
               <button
                 onClick={() => setCustomEmailLead(null)}
-                style={{ flex: 1, padding: '14px', background: 'transparent', border: '1px solid rgba(255,255,255,0.1)', color: '#94A3B8', borderRadius: '12px', fontWeight: 700, cursor: 'pointer' }}
+                style={{ flex: 1, padding: '14px', background: 'transparent', border: '1px solid #e2e8f0', color: '#64748B', borderRadius: '12px', fontWeight: 700, cursor: 'pointer' }}
               >
                 Cancel
               </button>
@@ -2513,15 +2515,15 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
         const availableSlots = getAvailableSlots(selectedDayOffset)
 
         return (
-          <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px' }}>
+          <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px' }}>
             <div style={{
-              background: '#0a0a0a',
-              border: '1px solid rgba(255,255,255,0.08)',
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
               borderRadius: '24px',
               width: '100%',
               maxWidth: '850px',
               padding: '32px',
-              boxShadow: '0 30px 60px rgba(0,0,0,0.8)',
+              boxShadow: '0 30px 60px rgba(0,0,0,0.1)',
               transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
               display: 'flex',
               flexDirection: 'column',
@@ -2532,14 +2534,14 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
               {/* Header */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px' }}>
                 <div>
-                  <h3 style={{ margin: 0, color: 'white', fontSize: '1.4rem', fontWeight: 800, fontFamily: "'Space Grotesk', sans-serif", letterSpacing: '-0.01em' }}>Visual Scheduling Hub</h3>
+                  <h3 style={{ margin: 0, color: '#0f172a', fontSize: '1.4rem', fontWeight: 800, fontFamily: "'Space Grotesk', sans-serif", letterSpacing: '-0.01em' }}>Visual Scheduling Hub</h3>
                   <p style={{ margin: '4px 0 0', color: '#64748B', fontSize: '0.8rem', fontWeight: 500 }}>Live availability from your primary calendar</p>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <span style={{ background: badgeBg, color: badgeColor, padding: '6px 12px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.01em' }}>
                     Agent: {activeAdminName}
                   </span>
-                  <button onClick={() => { setBookingLead(null); setBookingSuccess(false); setBookingError(''); }} style={{ background: 'rgba(255,255,255,0.03)', border: 'none', color: '#64748B', cursor: 'pointer', width: '32px', height: '32px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }} onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.06)'} onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.03)'}>
+                  <button onClick={() => { setBookingLead(null); setBookingSuccess(false); setBookingError(''); }} style={{ background: 'rgba(0,0,0,0.03)', border: 'none', color: '#64748B', cursor: 'pointer', width: '32px', height: '32px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }} onMouseEnter={e => e.currentTarget.style.background = 'rgba(0,0,0,0.06)'} onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,0,0,0.03)'}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                   </button>
                 </div>
@@ -2570,14 +2572,14 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
-                  <h4 style={{ margin: '0 0 8px', color: 'white', fontSize: '1.5rem', fontWeight: 800, fontFamily: "'Space Grotesk', sans-serif" }}>Appointment Scheduled!</h4>
-                  <p style={{ margin: '0 0 24px', color: '#94a3b8', fontSize: '0.9rem', maxWidth: '450px', lineHeight: 1.5 }}>
+                  <h4 style={{ margin: '0 0 8px', color: '#0f172a', fontSize: '1.5rem', fontWeight: 800, fontFamily: "'Space Grotesk', sans-serif" }}>Appointment Scheduled!</h4>
+                  <p style={{ margin: '0 0 24px', color: '#64748B', fontSize: '0.9rem', maxWidth: '450px', lineHeight: 1.5 }}>
                     The call was successfully booked. An email confirmation with meeting details and a Google Meet link has been sent to <strong>{bookingLead.name || bookingLead.email}</strong>, and details have been synced to <strong>info@finderadmin.com</strong>.
                   </p>
 
                   <div style={{
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    border: '1px solid rgba(255, 255, 255, 0.06)',
+                    background: '#f8fafc',
+                    border: '1px solid #e2e8f0',
                     borderRadius: '16px',
                     padding: '20px',
                     width: '100%',
@@ -2588,13 +2590,13 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                   }}>
                     <div style={{ display: 'grid', gridTemplateColumns: '95px 1fr', gap: '10px', fontSize: '0.85rem', lineHeight: 1.4 }}>
                       <span style={{ color: '#64748b', fontWeight: 600 }}>Event Title:</span>
-                      <span style={{ color: 'white', fontWeight: 700 }}>{bookingTitle}</span>
+                      <span style={{ color: '#0f172a', fontWeight: 700 }}>{bookingTitle}</span>
                       
                       <span style={{ color: '#64748b', fontWeight: 600 }}>Attendee:</span>
-                      <span style={{ color: 'white', fontWeight: 700 }}>{bookingLead.name ? `${bookingLead.name} (${bookingLead.email})` : bookingLead.email}</span>
+                      <span style={{ color: '#0f172a', fontWeight: 700 }}>{bookingLead.name ? `${bookingLead.name} (${bookingLead.email})` : bookingLead.email}</span>
                       
                       <span style={{ color: '#64748b', fontWeight: 600 }}>Date & Time:</span>
-                      <span style={{ color: '#60a5fa', fontWeight: 800 }}>
+                      <span style={{ color: '#1B365D', fontWeight: 800 }}>
                         {selectedSlot ? `${selectedSlot.start.toLocaleDateString([], { weekday: 'long', month: 'short', day: 'numeric' })} at ${selectedSlot.label}` : ''}
                       </span>
 
@@ -2663,10 +2665,10 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                           <select
                             value={bookingDisplayTZ}
                             onChange={e => { setBookingDisplayTZ(e.target.value); setSelectedSlot(null) }}
-                            style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', color: '#CBD5E1', fontSize: '0.7rem', fontWeight: 700, padding: '4px 8px', outline: 'none', cursor: 'pointer' }}
+                            style={{ background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: '8px', color: '#0f172a', fontSize: '0.7rem', fontWeight: 700, padding: '4px 8px', outline: 'none', cursor: 'pointer' }}
                           >
                             {US_TIMEZONES.map(tz => (
-                              <option key={tz.id} value={tz.id} style={{ background: '#0a0a0a' }}>{tz.label}</option>
+                              <option key={tz.id} value={tz.id} style={{ background: '#ffffff', color: '#0f172a' }}>{tz.label}</option>
                             ))}
                           </select>
                         </div>
@@ -2692,9 +2694,9 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                               style={{
                                 padding: '8px 2px',
                                 borderRadius: '12px',
-                                border: isActive ? '1.5px solid #3b82f6' : '1px solid rgba(255,255,255,0.06)',
-                                background: isActive ? 'rgba(59, 130, 246, 0.15)' : 'rgba(255,255,255,0.02)',
-                                color: isActive ? '#60a5fa' : '#cbd5e1',
+                                border: isActive ? '1.5px solid #1B365D' : '1px solid #e2e8f0',
+                                background: isActive ? 'rgba(27, 54, 93, 0.15)' : '#f8fafc',
+                                color: isActive ? '#1B365D' : '#0f172a',
                                 cursor: 'pointer',
                                 transition: 'all 0.2s',
                                 textAlign: 'center',
@@ -2751,9 +2753,9 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                                   style={{
                                     padding: '12px 6px',
                                     borderRadius: '10px',
-                                    border: isSelected ? '1.5px solid #3b82f6' : '1px solid rgba(255,255,255,0.06)',
-                                    background: isSelected ? 'rgba(59, 130, 246, 0.2)' : 'rgba(255,255,255,0.02)',
-                                    color: isSelected ? '#3b82f6' : '#e2e8f0',
+                                    border: isSelected ? '1.5px solid #1B365D' : '1px solid rgba(0,0,0,0.06)',
+                                    background: isSelected ? 'rgba(27, 54, 93, 0.15)' : '#f8fafc',
+                                    color: isSelected ? '#1B365D' : '#0f172a',
                                     fontSize: '0.85rem',
                                     fontWeight: 700,
                                     cursor: 'pointer',
@@ -2771,15 +2773,15 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                     </div>
 
                     {/* Right Column: Confirmation Form */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', borderLeft: '1px solid rgba(255,255,255,0.05)', paddingLeft: '28px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', borderLeft: '1px solid #e2e8f0', paddingLeft: '28px' }}>
                       
                       {/* Client Info Summary Card */}
-                      <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid rgba(255,255,255,0.04)', borderRadius: '16px', padding: '16px' }}>
+                      <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '16px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
                           <p style={{ margin: 0, color: '#64748B', fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Invited Guest</p>
                           <span style={{ fontSize: '0.65rem', color: '#10b981', background: 'rgba(16,185,129,0.1)', padding: '2px 8px', borderRadius: '8px', fontWeight: 700 }}>Prefilled</span>
                         </div>
-                        <p style={{ margin: '0 0 8px', color: 'white', fontWeight: 700, fontSize: '0.9rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{bookingLead.name || 'Unnamed'}</p>
+                        <p style={{ margin: '0 0 8px', color: '#0f172a', fontWeight: 700, fontSize: '0.9rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{bookingLead.name || 'Unnamed'}</p>
                         <div>
                           <label style={{ display: 'block', color: '#64748B', fontSize: '0.6rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>Send invite to</label>
                           <input
@@ -2787,12 +2789,12 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                             value={bookingOverrideEmail}
                             onChange={e => setBookingOverrideEmail(e.target.value)}
                             placeholder={bookingLead.email}
-                            style={{ width: '100%', padding: '7px 10px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', color: bookingOverrideEmail !== bookingLead.email ? '#fbbf24' : '#94a3b8', outline: 'none', fontSize: '0.78rem', fontWeight: 600, boxSizing: 'border-box', transition: 'border-color 0.2s' }}
-                            onFocus={e => e.target.style.borderColor = 'rgba(251,191,36,0.4)'}
-                            onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+                            style={{ width: '100%', padding: '7px 10px', background: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '8px', color: '#0f172a', outline: 'none', fontSize: '0.78rem', fontWeight: 600, boxSizing: 'border-box', transition: 'border-color 0.2s' }}
+                            onFocus={e => e.target.style.borderColor = '#C99F4A'}
+                            onBlur={e => e.target.style.borderColor = '#cbd5e1'}
                           />
                           {bookingOverrideEmail && bookingOverrideEmail !== bookingLead.email && (
-                            <p style={{ margin: '4px 0 0', fontSize: '0.6rem', color: '#fbbf24', fontWeight: 600 }}>⚡ Using override email</p>
+                            <p style={{ margin: '4px 0 0', fontSize: '0.6rem', color: '#C99F4A', fontWeight: 600 }}>⚡ Using override email</p>
                           )}
                         </div>
                       </div>
@@ -2808,7 +2810,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                             value={bookingTitle}
                             onChange={e => setBookingTitle(e.target.value)}
                             placeholder="Strategy session..."
-                            style={{ width: '100%', padding: '10px 14px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', color: 'white', outline: 'none', fontSize: '0.85rem', boxSizing: 'border-box' }}
+                            style={{ width: '100%', padding: '10px 14px', background: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '10px', color: '#0f172a', outline: 'none', fontSize: '0.85rem', boxSizing: 'border-box' }}
                           />
                         </div>
 
@@ -2820,20 +2822,20 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                             value={bookingDescription}
                             onChange={e => setBookingDescription(e.target.value)}
                             rows={3}
-                            style={{ width: '100%', padding: '10px 14px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', color: 'white', outline: 'none', fontSize: '0.85rem', boxSizing: 'border-box', resize: 'none' }}
+                            style={{ width: '100%', padding: '10px 14px', background: '#ffffff', border: '1px solid #cbd5e1', borderRadius: '10px', color: '#0f172a', outline: 'none', fontSize: '0.85rem', boxSizing: 'border-box', resize: 'none' }}
                           />
                         </div>
                       </div>
 
                       {/* Selected Slot Confirmation Block */}
-                      <div style={{ background: selectedSlot ? 'rgba(59, 130, 246, 0.05)' : 'rgba(255,255,255,0.01)', border: selectedSlot ? '1px solid rgba(59, 130, 246, 0.15)' : '1px solid rgba(255,255,255,0.04)', borderRadius: '12px', padding: '12px 14px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <div style={{ background: selectedSlot ? 'rgba(27, 54, 93, 0.05)' : '#f8fafc', border: selectedSlot ? '1px solid rgba(27, 54, 93, 0.15)' : '1px solid #e2e8f0', borderRadius: '12px', padding: '12px 14px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
                         <p style={{ margin: 0, color: '#64748B', fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Selected Time Slot</p>
                         {selectedSlot ? (
-                          <p style={{ margin: 0, color: '#60a5fa', fontSize: '0.85rem', fontWeight: 800 }}>
+                          <p style={{ margin: 0, color: '#1B365D', fontSize: '0.85rem', fontWeight: 800 }}>
                             {formatDateInTZ(selectedSlot.start, bookingDisplayTZ === 'calendar' ? null : bookingDisplayTZ)} at {selectedSlot.label}
                           </p>
                         ) : (
-                          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.8rem', fontWeight: 500 }}>
+                          <p style={{ margin: 0, color: '#64748B', fontSize: '0.8rem', fontWeight: 500 }}>
                             Select a date and time slot from the calendar availability grid.
                           </p>
                         )}
@@ -2845,14 +2847,14 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                           <path d="M23 7l-7 5 7 5V7z" />
                           <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
                         </svg>
-                        <p style={{ margin: 0, color: '#34d399', fontSize: '0.75rem', fontWeight: 700 }}>Google Meet video link added as method</p>
+                        <p style={{ margin: 0, color: '#10b981', fontSize: '0.75rem', fontWeight: 700 }}>Google Meet video link added as method</p>
                       </div>
 
                       {/* Modal Action Buttons */}
                       <div style={{ display: 'flex', gap: '10px', marginTop: 'auto' }}>
                         <button
                           onClick={() => setBookingLead(null)}
-                          style={{ flex: 1, padding: '12px', background: 'transparent', border: '1px solid rgba(255,255,255,0.1)', color: '#94A3B8', borderRadius: '10px', fontWeight: 700, cursor: 'pointer', transition: 'all 0.2s', fontSize: '0.85rem' }}
+                          style={{ flex: 1, padding: '12px', background: 'transparent', border: '1px solid #e2e8f0', color: '#64748B', borderRadius: '10px', fontWeight: 700, cursor: 'pointer', transition: 'all 0.2s', fontSize: '0.85rem' }}
                         >
                           Cancel
                         </button>
@@ -2862,7 +2864,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                           style={{
                             flex: 1.5,
                             padding: '12px',
-                            background: 'linear-gradient(135deg, #3b82f6, #10b981)',
+                            background: 'linear-gradient(135deg, #C99F4A, #1B365D)',
                             border: 'none',
                             color: 'white',
                             borderRadius: '10px',
@@ -2873,7 +2875,7 @@ export default function LeadBank({ filters = {}, title = "Lead Bank", subtitle =
                             alignItems: 'center',
                             justifyContent: 'center',
                             gap: '6px',
-                            boxShadow: selectedSlot ? '0 6px 20px rgba(59, 130, 246, 0.25)' : 'none',
+                            boxShadow: selectedSlot ? '0 6px 20px rgba(201, 159, 74, 0.25)' : 'none',
                             fontSize: '0.85rem',
                             transition: 'all 0.2s'
                           }}
