@@ -21,6 +21,12 @@ export default function AdminLayout({ children }) {
     fetchSegments()
   }, [])
 
+  // Force light theme on body for CRM
+  useEffect(() => {
+    document.body.classList.add('admin-light')
+    return () => document.body.classList.remove('admin-light')
+  }, [])
+
   useEffect(() => {
     const handleNewNotif = (e) => {
       const newNotif = e.detail
@@ -84,7 +90,7 @@ export default function AdminLayout({ children }) {
 
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: '"Space Grotesk", sans-serif' }}>
+    <div className="admin-crm-root" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: '"Space Grotesk", sans-serif' }}>
       <style>{`
         @media (max-width: 768px) {
           .admin-sidebar {
@@ -156,12 +162,12 @@ export default function AdminLayout({ children }) {
             key={toast.id}
             style={{
               pointerEvents: 'auto',
-              background: 'rgba(10, 10, 10, 0.95)',
-              border: '1px solid rgba(209, 187, 251, 0.3)',
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
               borderRadius: '16px',
               padding: '16px 20px',
               width: '320px',
-              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(209, 187, 251, 0.1)',
+              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
               display: 'flex',
               flexDirection: 'column',
               gap: '4px',
@@ -177,12 +183,12 @@ export default function AdminLayout({ children }) {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontWeight: 800, fontSize: '0.85rem', color: '#d1bbfb', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <span style={{ fontWeight: 800, fontSize: '0.85rem', color: '#1B365D', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 {toast.title}
               </span>
               <span style={{ fontSize: '0.7rem', color: '#64748B' }}>Just now</span>
             </div>
-            <p style={{ margin: 0, fontSize: '0.8rem', color: '#CBD5E1', lineHeight: 1.4 }}>
+            <p style={{ margin: 0, fontSize: '0.8rem', color: '#334155', lineHeight: 1.4 }}>
               {toast.content}
             </p>
           </div>
@@ -267,21 +273,21 @@ export default function AdminLayout({ children }) {
       <div style={{ display: 'flex', flex: 1 }}>
         {/* Sidebar */}
         <aside className={`admin-sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`} style={{
-          width: isCollapsed ? '80px' : '260px', background: '#0a0a0a', borderRight: '1px solid rgba(255, 255, 255, 0.1)',
+          width: isCollapsed ? '80px' : '260px', background: '#ffffff', borderRight: '1px solid #e2e8f0',
           display: 'flex', flexDirection: 'column', padding: isCollapsed ? '24px 12px' : '24px',
           transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
           position: 'relative'
         }}>
           <div style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: isCollapsed ? 'center' : 'space-between' }}>
             {!isCollapsed && (
-              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.25rem', fontWeight: 800, margin: 0, color: 'white' }}>
-                Finder<span style={{ color: '#d1bbfb' }}> admin</span>
+              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.25rem', fontWeight: 800, margin: 0, color: '#0f172a' }}>
+                Finder<span style={{ color: '#C99F4A' }}>admin</span>
               </h2>
             )}
             <button
               onClick={() => setIsCollapsed(!isCollapsed)}
               style={{
-                background: 'rgba(255,255,255,0.05)', border: 'none', color: '#94A3B8',
+                background: '#f1f5f9', border: 'none', color: '#64748B',
                 cursor: 'pointer', padding: '8px', borderRadius: '8px',
                 display: 'flex', alignItems: 'center', justifyContent: 'center'
               }}
@@ -302,8 +308,8 @@ export default function AdminLayout({ children }) {
                   style={{
                     display: 'flex', alignItems: 'center', gap: isCollapsed ? '0' : '12px', padding: '12px',
                     justifyContent: isCollapsed ? 'center' : 'flex-start',
-                    borderRadius: '12px', textDecoration: 'none', color: location.pathname.startsWith(item.to) ? 'white' : '#94A3B8',
-                    background: location.pathname.startsWith(item.to) ? 'rgba(209, 187, 251, 0.1)' : 'transparent',
+                    borderRadius: '12px', textDecoration: 'none', color: location.pathname.startsWith(item.to) ? '#ffffff' : '#64748B',
+                    background: location.pathname.startsWith(item.to) ? '#1B365D' : 'transparent',
                     transition: 'all 0.2s',
                     overflow: 'hidden'
                   }}
@@ -313,15 +319,15 @@ export default function AdminLayout({ children }) {
                   {!isCollapsed && <span style={{ fontWeight: 600, fontSize: '0.95rem', whiteSpace: 'nowrap' }}>{item.label}</span>}
                 </Link>
                 {!isCollapsed && item.children && location.pathname.startsWith(item.to) && (
-                  <div style={{ marginLeft: '42px', marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '4px', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+                  <div style={{ marginLeft: '42px', marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '4px', borderLeft: '1px solid #e2e8f0' }}>
                     {item.children.map(child => (
                       <Link
                         key={child.to} to={child.to}
                         onClick={() => setIsMobileMenuOpen(false)}
                         style={{
-                          padding: '8px 12px', color: location.pathname === child.to ? 'white' : '#64748B',
+                          padding: '8px 12px', color: location.pathname === child.to ? '#1B365D' : '#64748B',
                           fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none', borderRadius: '8px',
-                          background: location.pathname === child.to ? 'rgba(255,255,255,0.03)' : 'transparent',
+                          background: location.pathname === child.to ? 'rgba(27,54,93,0.06)' : 'transparent',
                           transition: 'all 0.2s'
                         }}
                       >
@@ -336,8 +342,8 @@ export default function AdminLayout({ children }) {
 
           {!isCollapsed && profile && (
             <div style={{
-              background: 'rgba(255,255,255,0.02)',
-              border: '1px solid rgba(255,255,255,0.06)',
+              background: '#f8fafc',
+              border: '1px solid #e2e8f0',
               borderRadius: '16px',
               padding: '12px 16px',
               marginBottom: '16px',
@@ -350,7 +356,7 @@ export default function AdminLayout({ children }) {
                 width: '36px',
                 height: '36px',
                 borderRadius: '50%',
-                background: profile?.role === 'admin' ? 'linear-gradient(135deg, #C99F4A, #1B365D)' : profile?.role === 'Napoleon' ? 'linear-gradient(135deg, #C99F4A, #ffffff)' : 'linear-gradient(135deg, #3b82f6, #10b981)',
+                background: profile?.role === 'admin' ? 'linear-gradient(135deg, #C99F4A, #1B365D)' : profile?.role === 'Napoleon' ? 'linear-gradient(135deg, #C99F4A, #1B365D)' : 'linear-gradient(135deg, #1B365D, #C99F4A)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -362,7 +368,7 @@ export default function AdminLayout({ children }) {
                 {(profile?.name || profile?.email || 'User').charAt(0).toUpperCase()}
               </div>
               <div style={{ minWidth: 0 }}>
-                <p style={{ margin: 0, fontWeight: 700, fontSize: '0.85rem', color: 'white', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                <p style={{ margin: 0, fontWeight: 700, fontSize: '0.85rem', color: '#0f172a', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                   {profile?.name || profile?.email?.split('@')[0] || 'User'}
                 </p>
                 <p style={{
@@ -370,7 +376,7 @@ export default function AdminLayout({ children }) {
                   fontSize: '0.7rem',
                   fontWeight: 800,
                   textTransform: 'uppercase',
-                  color: profile?.role === 'admin' ? '#d1bbfb' : profile?.role === 'Napoleon' ? '#c084fc' : '#4ade80',
+                  color: '#C99F4A',
                   letterSpacing: '0.05em'
                 }}>
                   {profile?.role || 'salesperson'}
@@ -600,7 +606,7 @@ export default function AdminLayout({ children }) {
             </div>
           </header>
 
-          <main className="admin-main-content" style={{ flex: 1, padding: '40px', overflowY: 'auto', background: '#050505' }}>
+          <main className="admin-main-content" style={{ flex: 1, padding: '40px', overflowY: 'auto', background: '#f8fafc' }}>
             {children}
           </main>
         </div>

@@ -108,6 +108,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Admin / CRM Light Theme Override ── */
+body.admin-light {
+    background: #f8fafc !important;
+    color: #0f172a !important;
+}
+
 @font-face {
     font-family: 'Moldie Demo';
     src: url('/fonts/Moldie-Demo.otf') format('opentype');
@@ -143,6 +149,11 @@ p, .body-font {
 
 html {
     background-color: #000000;
+}
+
+/* Admin CRM: override html dark bg */
+html:has(.admin-crm-root) {
+    background-color: #f8fafc !important;
 }
 
 /* Scrollbar Styles */
