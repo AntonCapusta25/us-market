@@ -125,15 +125,17 @@ body.admin-light {
     font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
-/* Display / section headings → Cormorant Garamond */
+/* All headings → Montserrat ExtraBold uppercase */
 .admin-crm-root h1,
 .admin-crm-root h2,
 .admin-crm-root h3 {
-    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif !important;
-    letter-spacing: 0.01em;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
-/* UI labels, buttons, small caps, nav → Montserrat */
+/* UI labels, buttons, inputs → Montserrat */
 .admin-crm-root label,
 .admin-crm-root button,
 .admin-crm-root a,

@@ -280,7 +280,7 @@ export default function AdminLayout({ children }) {
         }}>
           <div style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: isCollapsed ? 'center' : 'space-between' }}>
             {!isCollapsed && (
-              <h2 style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", fontSize: '1.4rem', fontWeight: 700, margin: 0, color: '#0f172a', letterSpacing: '0.02em' }}>
+              <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '1.1rem', fontWeight: 800, margin: 0, color: '#0f172a', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                 Finder<span style={{ color: '#C99F4A' }}>admin</span>
               </h2>
             )}
@@ -436,7 +436,7 @@ export default function AdminLayout({ children }) {
                   <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
               </button>
-              <h2 className="admin-header-title" style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", fontSize: '1.5rem', fontWeight: 700, margin: 0, color: '#0F172A', letterSpacing: '0.01em' }}>
+              <h2 className="admin-header-title" style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '1rem', fontWeight: 800, margin: 0, color: '#0F172A', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                 {getPageTitle()}
               </h2>
             </div>
