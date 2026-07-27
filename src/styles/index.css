@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 :root {
     --primary-color: #C99F4A; /* Gold */
     --primary-gradient: linear-gradient(135deg, #C99F4A, #1B365D); /* Gold to Navy Blue */
     --primary-glow: rgba(201, 159, 74, 0.45);
+
+    /* Admin CRM Typography */
+    --admin-font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --admin-font-ui: 'Montserrat', 'Space Grotesk', sans-serif;
+    --admin-font-body: 'Montserrat', 'Inter', sans-serif;
 }
 
 /* AutoFlow Studio - Main Styles */
@@ -112,6 +117,33 @@ body {
 body.admin-light {
     background: #f8fafc !important;
     color: #0f172a !important;
+    font-family: 'Montserrat', 'Inter', sans-serif !important;
+}
+
+/* ── Admin CRM Typography System ── */
+.admin-crm-root {
+    font-family: 'Montserrat', 'Inter', sans-serif;
+}
+
+/* Display / section headings → Cormorant Garamond */
+.admin-crm-root h1,
+.admin-crm-root h2,
+.admin-crm-root h3 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif !important;
+    letter-spacing: 0.01em;
+}
+
+/* UI labels, buttons, small caps, nav → Montserrat */
+.admin-crm-root label,
+.admin-crm-root button,
+.admin-crm-root a,
+.admin-crm-root nav,
+.admin-crm-root input,
+.admin-crm-root select,
+.admin-crm-root textarea,
+.admin-crm-root p,
+.admin-crm-root span {
+    font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
 @font-face {

@@ -90,7 +90,7 @@ export default function AdminLayout({ children }) {
 
 
   return (
-    <div className="admin-crm-root" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: '"Space Grotesk", sans-serif' }}>
+    <div className="admin-crm-root" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: "'Montserrat', 'Inter', sans-serif" }}>
       <style>{`
         @media (max-width: 768px) {
           .admin-sidebar {
@@ -183,7 +183,7 @@ export default function AdminLayout({ children }) {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontWeight: 800, fontSize: '0.85rem', color: '#1B365D', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+              <span style={{ fontWeight: 800, fontSize: '0.78rem', color: '#1B365D', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'Montserrat', sans-serif" }}>
                 {toast.title}
               </span>
               <span style={{ fontSize: '0.7rem', color: '#64748B' }}>Just now</span>
@@ -280,7 +280,7 @@ export default function AdminLayout({ children }) {
         }}>
           <div style={{ marginBottom: '40px', display: 'flex', alignItems: 'center', justifyContent: isCollapsed ? 'center' : 'space-between' }}>
             {!isCollapsed && (
-              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.25rem', fontWeight: 800, margin: 0, color: '#0f172a' }}>
+              <h2 style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", fontSize: '1.4rem', fontWeight: 700, margin: 0, color: '#0f172a', letterSpacing: '0.02em' }}>
                 Finder<span style={{ color: '#C99F4A' }}>admin</span>
               </h2>
             )}
@@ -316,7 +316,7 @@ export default function AdminLayout({ children }) {
                   title={isCollapsed ? item.label : ''}
                 >
                   <span style={{ fontSize: '1.2rem', flexShrink: 0 }}>{item.icon}</span>
-                  {!isCollapsed && <span style={{ fontWeight: 600, fontSize: '0.95rem', whiteSpace: 'nowrap' }}>{item.label}</span>}
+                  {!isCollapsed && <span style={{ fontWeight: 600, fontSize: '0.82rem', whiteSpace: 'nowrap', fontFamily: "'Montserrat', sans-serif", letterSpacing: '0.02em' }}>{item.label}</span>}
                 </Link>
                 {!isCollapsed && item.children && location.pathname.startsWith(item.to) && (
                   <div style={{ marginLeft: '42px', marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '4px', borderLeft: '1px solid #e2e8f0' }}>
@@ -368,16 +368,17 @@ export default function AdminLayout({ children }) {
                 {(profile?.name || profile?.email || 'User').charAt(0).toUpperCase()}
               </div>
               <div style={{ minWidth: 0 }}>
-                <p style={{ margin: 0, fontWeight: 700, fontSize: '0.85rem', color: '#0f172a', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                <p style={{ margin: 0, fontWeight: 700, fontSize: '0.82rem', color: '#0f172a', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontFamily: "'Montserrat', sans-serif" }}>
                   {profile?.name || profile?.email?.split('@')[0] || 'User'}
                 </p>
                 <p style={{
                   margin: 0,
-                  fontSize: '0.7rem',
+                  fontSize: '0.65rem',
                   fontWeight: 800,
                   textTransform: 'uppercase',
                   color: '#C99F4A',
-                  letterSpacing: '0.05em'
+                  letterSpacing: '0.08em',
+                  fontFamily: "'Montserrat', sans-serif"
                 }}>
                   {profile?.role || 'salesperson'}
                 </p>
@@ -435,7 +436,7 @@ export default function AdminLayout({ children }) {
                   <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
               </button>
-              <h2 className="admin-header-title" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.25rem', fontWeight: 800, margin: 0, color: '#0F172A' }}>
+              <h2 className="admin-header-title" style={{ fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif", fontSize: '1.5rem', fontWeight: 700, margin: 0, color: '#0F172A', letterSpacing: '0.01em' }}>
                 {getPageTitle()}
               </h2>
             </div>
@@ -501,7 +502,7 @@ export default function AdminLayout({ children }) {
                   }}
                 >
                   <div style={{ padding: '16px 20px', borderBottom: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontWeight: 800, fontSize: '0.9rem', color: '#0f172a', fontFamily: "'Space Grotesk', sans-serif" }}>Notifications</span>
+                    <span style={{ fontWeight: 800, fontSize: '0.85rem', color: '#1B365D', fontFamily: "'Montserrat', sans-serif" }}>Notifications</span>
                     {unreadCount > 0 && (
                        <button
                          onClick={markAllAsRead}
